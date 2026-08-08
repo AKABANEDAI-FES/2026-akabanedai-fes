@@ -4,6 +4,7 @@
   "editor.formatOnSaveMode": "file",
   "editor.codeActionsOnSave": {
     "source.fixAll.oxc": "always",
+    "source.fixAll.stylelint": "always",
     "source.removeUnusedImports": "always"
   },
 
@@ -19,11 +20,17 @@
   "js/ts.suggest.autoImports": true,
   "js/ts.updateImportsOnFileMove.enabled": "always",
 
+  "css.validate": false,
+  "stylelint.validate": ["css"],
+
   "[typescript]": {
     "editor.defaultFormatter": "oxc.oxc-vscode",
     "editor.quickSuggestions": {
       "strings": "on"
     }
+  },
+  "[css]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
   },
   "[json]": {
     "editor.defaultFormatter": "oxc.oxc-vscode"

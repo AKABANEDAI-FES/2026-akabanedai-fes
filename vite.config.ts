@@ -61,10 +61,32 @@ export default defineConfig({
         cache: false,
         dependsOn: ['build'],
       },
+      check: {
+        command: '',
+        dependsOn: ['check:oxc', 'check:stylelint'],
+      },
+      fix: {
+        command: '',
+        dependsOn: ['fix:oxc', 'fix:stylelint'],
+      },
       'gen:types': {
         command: 'wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts',
         input: [{ auto: true }, '!cloudflare-env.d.ts'],
         output: ['cloudflare-env.d.ts'],
+      },
+
+      // internal tasks
+      'check:oxc': {
+        command: 'vp check',
+      },
+      'check:stylelint': {
+        command: 'stylelint "src/**/*.css" --ignore-path .gitignore',
+      },
+      'fix:oxc': {
+        command: 'vp check --fix',
+      },
+      'fix:stylelint': {
+        command: 'stylelint "src/**/*.css" --ignore-path .gitignore --fix',
       },
     },
   },
