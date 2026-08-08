@@ -1,6 +1,9 @@
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import type { ReactNode } from 'react'
 
+import globalCssUrl from '../styles/global.css?url'
+import styles from './__root.module.css'
+
 const SITE_NAME = '赤羽台祭'
 const SITE_TITLE = '赤羽台祭 [東洋大学赤羽台キャンパス大学祭]'
 const SITE_DESCRIPTION =
@@ -17,7 +20,7 @@ const RootDocument = ({ children }: RootDocumentProps) => (
       <HeadContent />
     </head>
     <body>
-      {children}
+      <div className={styles.root}>{children}</div>
       <Scripts />
     </body>
   </html>
@@ -40,6 +43,7 @@ export const Route = createRootRoute({
       { name: 'twitter:title', content: SITE_TITLE },
       { name: 'twitter:description', content: SITE_DESCRIPTION },
     ],
+    links: [{ rel: 'stylesheet', href: globalCssUrl }],
   }),
   shellComponent: RootDocument,
 })
