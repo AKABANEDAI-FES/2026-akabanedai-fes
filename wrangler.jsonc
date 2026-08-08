@@ -13,5 +13,15 @@
       "enabled": true,
     },
   },
+  "routes": [
+    {
+      "pattern": "akabanedai-fes.com/10",
+      "zone_name": "akabanedai-fes.com",
+    },
+    {
+      "pattern": "akabanedai-fes.com/10/*",
+      "zone_name": "akabanedai-fes.com",
+    },
+  ],
   "workers_dev": false,
 }
