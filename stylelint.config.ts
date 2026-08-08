@@ -1,7 +1,11 @@
 import type { Config } from 'stylelint'
 
 export default {
-  extends: ['stylelint-config-standard', 'stylelint-config-recess-order'],
+  extends: [
+    'stylelint-config-standard',
+    'stylelint-config-recess-order',
+    '@css-modules-kit/stylelint-plugin/recommended',
+  ],
 
   rules: {
     'selector-pseudo-class-no-unknown': [true, { ignorePseudoClasses: ['global', 'local'] }],

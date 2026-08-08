@@ -74,6 +74,9 @@ export default defineConfig({
         input: [{ auto: true }, '!cloudflare-env.d.ts'],
         output: ['cloudflare-env.d.ts'],
       },
+      'gen:cmk': {
+        command: 'cmk',
+      },
 
       // internal tasks
       'check:oxc': {
