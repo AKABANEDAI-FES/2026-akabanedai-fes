@@ -1,1 +1,8 @@
 .direnv/
+
+node_modules/
+.wrangler/
+
+dist/
+.tanstack/
+src/routeTree.gen.ts

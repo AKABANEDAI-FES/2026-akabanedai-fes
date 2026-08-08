@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "preserve",
+    "target": "esnext",
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "jsx": "react-jsx",
+    "types": ["node", "vite-plus/client"],
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    "strict": true,
+    "verbatimModuleSyntax": true,
+    "erasableSyntaxOnly": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true
+  },
+  "include": ["src", "vite.config.ts", "cloudflare-env.d.ts"]
+}
