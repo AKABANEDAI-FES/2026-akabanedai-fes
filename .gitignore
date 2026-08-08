@@ -7,3 +7,6 @@ dist/
 .tanstack/
 src/routeTree.gen.ts
 .cmk/
+
+*storybook.log
+storybook-static

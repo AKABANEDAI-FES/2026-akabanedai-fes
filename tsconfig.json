@@ -21,7 +21,7 @@
 
     "rootDirs": [".", ".cmk"]
   },
-  "include": ["src", "vite.config.ts", "cloudflare-env.d.ts"],
+  "include": ["src", ".storybook", "vite.config.ts", "cloudflare-env.d.ts"],
   "cmkOptions": {
     "enabled": true,
     "dtsOutDir": ".cmk"
