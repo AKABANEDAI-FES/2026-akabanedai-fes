@@ -5,6 +5,7 @@ import viteReact from '@vitejs/plugin-react'
 import { type Plugin, defineConfig } from 'vite-plus'
 
 const isStorybook = process.env.STORYBOOK === 'true'
+const isVitest = process.env.VITEST === 'true'
 
 /**
  * 生成される wrangler.json の `assets.directory` を `dist/client` に固定する
@@ -43,7 +44,9 @@ export default defineConfig({
     devtools(),
     tanstackStart(),
     viteReact(),
-    ...(isStorybook ? [] : [cloudflare({ viteEnvironment: { name: 'ssr' } }), workersAssetsRoot()]),
+    ...(isStorybook || isVitest
+      ? []
+      : [cloudflare({ viteEnvironment: { name: 'ssr' } }), workersAssetsRoot()]),
   ],
   staged: {
     '*': 'vp check --fix',
