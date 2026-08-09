@@ -1,0 +1,59 @@
+name: Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: voidzero-dev/setup-vp@143f5f385f39b1b753ffed1a01ad443811855c8b # v1.16.1
+        with:
+          node-version: '24'
+          cache: true
+      - name: Install dependencies
+        run: vp install
+      - name: Generate CSS Modules types
+        run: vp run gen:cmk
+      - name: Oxfmt
+        run: vp fmt --check
+      - name: Oxlint
+        run: vp lint -f github
+      - name: Stylelint
+        run: vp run check:stylelint
+      - name: Test
+        run: vp test --run
+      - name: Build
+        run: vp build
+
+  generated-files:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: voidzero-dev/setup-vp@143f5f385f39b1b753ffed1a01ad443811855c8b # v1.16.1
+        with:
+          node-version: '24'
+          cache: true
+      - name: Install dependencies
+        run: vp install
+      - name: Generate Cloudflare env types
+        run: vp run gen:types
+      - name: Check for drift
+        run: git diff --exit-code cloudflare-env.d.ts
