@@ -73,6 +73,9 @@ export default defineConfig({
         command: '',
         dependsOn: ['fix:oxc', 'fix:stylelint'],
       },
+      test: {
+        command: 'vp test',
+      },
       'gen:types': {
         command: 'wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts',
         input: [{ auto: true }, '!cloudflare-env.d.ts'],
