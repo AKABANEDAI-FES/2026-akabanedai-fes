@@ -17,6 +17,8 @@
     "@cloudflare/vite-plugin": "^1.51.1",
     "@css-modules-kit/codegen": "^1.4.0",
     "@css-modules-kit/stylelint-plugin": "^1.4.0",
+    "@hey-api/openapi-ts": "^0.99.0",
+    "@hey-api/vite-plugin": "^0.3.2",
     "@storybook/addon-a11y": "^10.5.7",
     "@storybook/addon-docs": "^10.5.7",
     "@storybook/addon-vitest": "^10.5.7",
