@@ -1,4 +1,7 @@
+import { existsSync } from 'node:fs'
+
 import { cloudflare } from '@cloudflare/vite-plugin'
+import { heyApiPlugin } from '@hey-api/vite-plugin'
 import { devtools } from '@tanstack/devtools-vite'
 import { tanstackStart } from '@tanstack/react-start/plugin/vite'
 import viteReact from '@vitejs/plugin-react'
@@ -41,6 +44,21 @@ export default defineConfig({
     },
   },
   plugins: [
+    heyApiPlugin({
+      config: {
+        input: 'https://akabase.akabanedai-fes.com/api/v1/openapi.json',
+        output: 'src/api/akabase/generated',
+        plugins: [
+          {
+            name: '@hey-api/client-fetch',
+            runtimeConfigPath: './src/api/akabase/config.ts',
+          },
+        ],
+      },
+      vite: {
+        apply: () => !existsSync('src/api/akabase/generated/index.ts'),
+      },
+    }),
     devtools(),
     tanstackStart(),
     viteReact(),
@@ -107,13 +125,13 @@ export default defineConfig({
     },
   },
   fmt: {
-    ignorePatterns: ['cloudflare-env.d.ts', 'src/routeTree.gen.ts'],
+    ignorePatterns: ['cloudflare-env.d.ts', 'src/routeTree.gen.ts', 'src/api/akabase/generated/**'],
     semi: false,
     singleQuote: true,
     sortImports: {},
   },
   lint: {
-    ignorePatterns: ['cloudflare-env.d.ts', 'src/routeTree.gen.ts'],
+    ignorePatterns: ['cloudflare-env.d.ts', 'src/routeTree.gen.ts', 'src/api/akabase/generated/**'],
     options: {
       typeAware: true,
       typeCheck: true,
