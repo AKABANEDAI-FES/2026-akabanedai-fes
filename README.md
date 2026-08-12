@@ -51,13 +51,27 @@ https://akabanedai-fes.com/10
    vp install
    ```
 
-3. 開発サーバを起動します
+3. 環境変数を設定します
+
+   ```bash
+   cp .dev.vars.example .dev.vars
+   ```
+
+   `.dev.vars` に必要な値を記入します。値は「環境変数」の節を参照してください
+
+4. 開発サーバを起動します
 
    ```bash
    vpr dev
    ```
 
-4. [http://localhost:5173/10](http://localhost:5173/10) にアクセスします
+5. [http://localhost:5173/10](http://localhost:5173/10) にアクセスします
+
+### 環境変数
+
+| 名前              | 説明                                                       |
+| ----------------- | ---------------------------------------------------------- |
+| `AKABASE_API_KEY` | AKABASE の API キー。取得方法は Slack で確認してください。 |
 
 ### VSCode 拡張機能
 
