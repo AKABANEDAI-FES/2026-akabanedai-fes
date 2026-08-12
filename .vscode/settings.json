@@ -29,6 +29,9 @@
       "strings": "on"
     }
   },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
   "[css]": {
     "editor.defaultFormatter": "oxc.oxc-vscode"
   },
