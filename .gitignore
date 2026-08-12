@@ -6,6 +6,8 @@ node_modules/
 dist/
 .tanstack/
 src/routeTree.gen.ts
+src/api/akabase/generated/
+openapi-ts-error-*.log
 .cmk/
 
 *storybook.log
