@@ -62,7 +62,11 @@ export default defineConfig({
     }),
     devtools(),
     withFilter(svgr(), { load: { id: /\.svg\?react$/ } }),
-    tanstackStart(),
+    tanstackStart({
+      router: {
+        routeFileIgnorePattern: '^_(?!_root)',
+      },
+    }),
     viteReact(),
     ...(isStorybook || isVitest
       ? []
