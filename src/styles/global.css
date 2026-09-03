@@ -1,3 +1,17 @@
+:root {
+  color-scheme: light;
+
+  --color-primary: oklch(81.07% 0.1109 219.41deg);
+  --color-secondary: oklch(94.31% 0.1876 109.84deg);
+  --color-accent: oklch(77.1% 0.1602 57.57deg);
+  --color-background: oklch(99.68% 0.0157 106.68deg);
+  --color-surface: oklch(100% 0 0deg);
+  --color-foreground: oklch(0% 0 0deg);
+  --color-border: oklch(0% 0 0deg);
+}
+
 body {
   position: relative;
+  color: var(--color-foreground);
+  background-color: var(--color-background);
 }

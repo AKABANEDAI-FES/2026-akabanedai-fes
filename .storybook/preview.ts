@@ -1,4 +1,7 @@
+/// <reference types="vite-plus/client" />
 import type { Preview } from '@storybook/tanstack-react'
+
+import '../src/styles/global.css'
 
 const preview = {
   parameters: {
