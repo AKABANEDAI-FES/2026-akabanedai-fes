@@ -1,0 +1,77 @@
+.firstView {
+  position: relative;
+  display: flex;
+  min-height: 100svh;
+  padding: 4rem;
+  overflow: hidden;
+  background-color: var(--color-background);
+
+  @media (width < 1024px) {
+    padding: 3rem;
+  }
+
+  @media (width < 768px) {
+    padding: 1.5rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: min(100%, var(--width-content));
+  margin-inline: auto;
+}
+
+.title {
+  margin: 0;
+}
+
+.edition {
+  display: block;
+  margin: 0 0 1.5rem;
+  font-size: 4.875rem;
+  font-weight: 700;
+  line-height: 1.2;
+
+  @media (width < 1024px) {
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
+  }
+
+  @media (width < 768px) {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+  }
+}
+
+.logo {
+  width: min(100%, 44rem);
+  height: auto;
+}
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 7rem 0 0;
+  font-size: 4.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--color-foreground);
+  text-align: right;
+
+  @media (width < 1024px) {
+    margin-top: 4rem;
+    font-size: 3rem;
+  }
+
+  @media (width < 768px) {
+    margin-top: 3rem;
+    font-size: 2rem;
+  }
+}
+
+.segment {
+  display: inline-block;
+}
