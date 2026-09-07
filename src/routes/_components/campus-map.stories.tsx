@@ -1,9 +1,14 @@
-import { createFileRoute } from '@tanstack/react-router'
+import type { Meta, StoryObj } from '@storybook/tanstack-react'
 
-export const Route = createFileRoute('/_components/campus-map/stories')({
-  component: RouteComponent,
-})
+import { CampusMap } from './campus-map'
 
-function RouteComponent() {
-  return <div>Hello "/_components/campus-map/stories"!</div>
-}
+const meta = {
+  component: CampusMap,
+  tags: ['autodocs'],
+} satisfies Meta<typeof CampusMap>
+
+export default meta
+
+type Story = StoryObj<typeof meta>
+
+export const Default: Story = {}

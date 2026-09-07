@@ -5,7 +5,8 @@ import { heyApiPlugin } from '@hey-api/vite-plugin'
 import { devtools } from '@tanstack/devtools-vite'
 import { tanstackStart } from '@tanstack/react-start/plugin/vite'
 import viteReact from '@vitejs/plugin-react'
-import { type Plugin, defineConfig } from 'vite-plus'
+import svgr from 'vite-plugin-svgr'
+import { type Plugin, defineConfig, withFilter } from 'vite-plus'
 
 const isStorybook = process.env.STORYBOOK === 'true'
 const isVitest = process.env.VITEST === 'true'
@@ -60,7 +61,12 @@ export default defineConfig({
       },
     }),
     devtools(),
-    tanstackStart(),
+    withFilter(svgr(), { load: { id: /\.svg\?react$/ } }),
+    tanstackStart({
+      router: {
+        routeFileIgnorePattern: '^_(?!_root)',
+      },
+    }),
     viteReact(),
     ...(isStorybook || isVitest
       ? []
