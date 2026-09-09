@@ -1,0 +1,19 @@
+.links {
+  display: grid;
+  grid-template-columns: repeat(4, 160px);
+  gap: 48px;
+  justify-content: center;
+}
+
+@media (width <= 1400px) {
+  .links {
+    grid-template-columns: repeat(2, 160px);
+  }
+}
+
+@media (width <= 640px) {
+  .links {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
