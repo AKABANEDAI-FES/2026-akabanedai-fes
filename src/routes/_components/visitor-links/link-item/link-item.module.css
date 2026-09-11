@@ -1,12 +1,12 @@
 .link {
   display: flex;
+  gap: 1.5rem;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
   padding: 3rem 0;
-  text-decoration: none;
-  color: var(--color-foreground, #252521);
   font-size: clamp(1.5rem, 4vw, 3rem);
+  color: var(--color-foreground);
+  text-decoration: none;
 }
 
 .iconWrapper {
@@ -15,13 +15,12 @@
 }
 
 .chevron {
+  display: block;
   width: clamp(0.75rem, 2vw, 1.5rem);
   height: clamp(0.75rem, 2vw, 1.5rem);
-  border-top: clamp(4px, 0.5vw, 8px) solid var(--color-accent, #ff973c);
-  border-right: clamp(4px, 0.5vw, 8px) solid var(--color-accent, #ff973c);
+  border-top: clamp(4px, 0.5vw, 8px) solid var(--color-accent);
+  border-right: clamp(4px, 0.5vw, 8px) solid var(--color-accent);
   transform: rotate(45deg);
-  display: block;
-
   transition: transform 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 
@@ -30,24 +29,24 @@
 }
 
 .link:hover .chevron:nth-child(1) {
+  border-color: var(--color-accent);
   transform: scale(1.25) rotate(45deg);
-  border-color: var(--color-accent, #ff973c);
   transition-delay: 0s;
 }
 
 .link:hover .chevron:nth-child(2) {
+  border-color: var(--color-accent);
   transform: scale(1.25) rotate(45deg);
-  border-color: var(--color-accent, #ff973c);
   transition-delay: 0.06s;
 }
 
 .link:hover .chevron:nth-child(3) {
+  border-color: var(--color-accent);
   transform: scale(1.25) rotate(45deg);
-  border-color: var(--color-accent, #ff973c);
   transition-delay: 0.12s;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .link {
     gap: 1rem;
   }
