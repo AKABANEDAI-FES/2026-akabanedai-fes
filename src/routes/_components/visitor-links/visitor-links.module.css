@@ -1,7 +1,7 @@
 .container {
   width: 100%;
   min-height: 90dvh;
-  background-color: var(--color-primary, #6ed0e6);
+  background-color: var(--color-primary, #62d2f2);
   display: flex;
   justify-content: center;
   position: relative;
@@ -30,8 +30,8 @@
   height: 2px;
   background: linear-gradient(
     to right,
-    var(--color-secondary, #fbe84c),
-    var(--color-accent, #ff8c00)
+    var(--color-secondary, #f5f642),
+    var(--color-accent, #ff973c)
   );
 }
 

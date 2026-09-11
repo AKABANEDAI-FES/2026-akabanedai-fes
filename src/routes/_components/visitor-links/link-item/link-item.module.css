@@ -5,7 +5,7 @@
   gap: 1.5rem;
   padding: 3rem 0;
   text-decoration: none;
-  color: var(--color-foreground, #1a1a1a);
+  color: var(--color-foreground, #252521);
   font-size: clamp(1.5rem, 4vw, 3rem);
 }
 
@@ -17,8 +17,8 @@
 .chevron {
   width: clamp(0.75rem, 2vw, 1.5rem);
   height: clamp(0.75rem, 2vw, 1.5rem);
-  border-top: clamp(4px, 0.5vw, 8px) solid var(--color-accent, #ff8c00);
-  border-right: clamp(4px, 0.5vw, 8px) solid var(--color-accent, #ff8c00);
+  border-top: clamp(4px, 0.5vw, 8px) solid var(--color-accent, #ff973c);
+  border-right: clamp(4px, 0.5vw, 8px) solid var(--color-accent, #ff973c);
   transform: rotate(45deg);
   display: block;
 
@@ -31,19 +31,19 @@
 
 .link:hover .chevron:nth-child(1) {
   transform: scale(1.25) rotate(45deg);
-  border-color: var(--color-accent, #ff8c00);
+  border-color: var(--color-accent, #ff973c);
   transition-delay: 0s;
 }
 
 .link:hover .chevron:nth-child(2) {
   transform: scale(1.25) rotate(45deg);
-  border-color: var(--color-accent, #ff8c00);
+  border-color: var(--color-accent, #ff973c);
   transition-delay: 0.06s;
 }
 
 .link:hover .chevron:nth-child(3) {
   transform: scale(1.25) rotate(45deg);
-  border-color: var(--color-accent, #ff8c00);
+  border-color: var(--color-accent, #ff973c);
   transition-delay: 0.12s;
 }
 
