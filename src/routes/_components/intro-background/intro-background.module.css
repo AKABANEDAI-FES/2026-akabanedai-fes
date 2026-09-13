@@ -1,0 +1,58 @@
+@keyframes parallax {
+  to {
+    translate: calc(cos(var(--angle)) * var(--speed) * 100svh)
+      calc(sin(var(--angle)) * var(--speed) * 100svh);
+  }
+}
+
+.introBackground {
+  position: relative;
+  overflow: clip;
+  isolation: isolate;
+}
+
+.decorations {
+  --angle: -48deg;
+
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  container-type: inline-size;
+  pointer-events: none;
+}
+
+.layerBack,
+.layerMiddle,
+.layerFront {
+  --speed: 0;
+
+  position: absolute;
+  inset: 0;
+
+  & > * {
+    position: absolute;
+    rotate: var(--angle);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: scroll()) {
+      animation-name: parallax;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: scroll(root);
+      animation-range: 0 100svh;
+    }
+  }
+}
+
+.layerBack {
+  --speed: 0.3;
+}
+
+.layerMiddle {
+  --speed: 0.6;
+}
+
+.layerFront {
+  --speed: 0.9;
+}
