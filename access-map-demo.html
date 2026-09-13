@@ -50,16 +50,34 @@
         color: var(--color-foreground);
       }
 
-      .title::after {
-        display: inline-block;
-        flex-shrink: 0;
+      .arrows {
+        display: inline-flex;
+        align-items: center;
+        margin-left: 0.25rem;
+        position: relative;
+        width: 32px;
+        height: 1.5rem;
+      }
+
+      .arrow {
+        position: absolute;
         width: 0;
         height: 0;
-        content: '';
         border-top: 6px solid transparent;
         border-bottom: 6px solid transparent;
         border-left: 8px solid var(--color-accent);
-        margin-left: 0.25rem;
+      }
+
+      .arrow:nth-child(1) {
+        left: 0;
+      }
+
+      .arrow:nth-child(2) {
+        left: 8px;
+      }
+
+      .arrow:nth-child(3) {
+        left: 16px;
       }
 
       .content {
@@ -173,7 +191,14 @@
   </head>
   <body>
     <div class="container">
-      <h2 class="title">ACCESS</h2>
+      <h2 class="title">
+        ACCESS
+        <span class="arrows">
+          <span class="arrow"></span>
+          <span class="arrow"></span>
+          <span class="arrow"></span>
+        </span>
+      </h2>
       <div class="content">
         <div class="mapWrapper">
           <img src="./2026_アクセスマップ.svg" alt="アクセスマップ" class="mapImage" />
