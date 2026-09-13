@@ -1,0 +1,7 @@
+.stripe {
+  --stripe-from: var(--color-secondary);
+  --stripe-to: var(--color-primary);
+
+  background-image: linear-gradient(to right, var(--stripe-from), var(--stripe-to));
+  border-radius: 9999px;
+}

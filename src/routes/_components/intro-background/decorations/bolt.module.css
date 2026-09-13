@@ -1,0 +1,5 @@
+.bolt {
+  aspect-ratio: 2;
+  background-color: var(--color-secondary);
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%);
+}
