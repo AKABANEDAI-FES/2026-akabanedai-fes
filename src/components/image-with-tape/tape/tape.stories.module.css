@@ -1,0 +1,9 @@
+.list {
+  display: grid;
+  gap: 1rem;
+  width: 24rem;
+}
+
+.tape {
+  height: 3rem;
+}
