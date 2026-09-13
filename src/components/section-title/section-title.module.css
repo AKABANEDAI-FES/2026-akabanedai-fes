@@ -1,0 +1,21 @@
+.title {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-foreground);
+}
+
+.title::after {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 0;
+  height: 0;
+  content: '';
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 8px solid var(--color-accent);
+}

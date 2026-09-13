@@ -1,0 +1,37 @@
+.box {
+  position: relative;
+  z-index: 1;
+  padding: 1.5rem;
+  overflow: hidden;
+  background-color: var(--color-background);
+  border-radius: 0.5rem;
+  box-shadow: -4px 4px 12px color-mix(in srgb, var(--color-primary) 30%, transparent);
+}
+
+.box::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  pointer-events: none;
+  content: '';
+  background: repeating-linear-gradient(
+    90deg,
+    var(--color-secondary) 0,
+    var(--color-secondary) 10px,
+    color-mix(in srgb var(--color-secondary) 70% rgb(0 0 0)) 10px,
+    color-mix(in srgb var(--color-secondary) 70% rgb(0 0 0)) 20px
+  );
+}
+
+.box::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40px;
+  height: 8px;
+  pointer-events: none;
+  content: '';
+  background-color: var(--color-accent);
+}
