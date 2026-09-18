@@ -1,0 +1,129 @@
+/* src/routes/_components/program-carousel/carousel/carousel.module.css */
+.container {
+  position: relative;
+  display: flex;
+
+  /* 2枚目画像のようにカード同士の左右間隔をしっかり空ける */
+  gap: 36px;
+  align-items: flex-end; /* 下揃え */
+  justify-content: center;
+  width: 100%;
+  max-width: 1100px;
+
+  /* 矢印が下に突き出しても見切れないよう下部パディングを確保 */
+  padding: 30px 0 60px;
+  margin: 0 auto;
+}
+
+.slide {
+  box-sizing: border-box;
+  flex-shrink: 0; /* ★ 画面幅やコンテンツによってカードが押し潰されるのを防止 */
+  transition: all 0.3s ease;
+}
+
+/* 中央スライド（横幅を320pxで完全固定） */
+.centerSlide {
+  z-index: 2;
+  flex: 0 0 320px;
+  width: 320px;
+  min-width: 320px;
+}
+
+/* 左右のスライド（横幅を280pxで完全固定） */
+.sideSlide {
+  z-index: 1;
+  flex: 0 0 280px;
+  width: 280px;
+  min-width: 280px;
+  opacity: 0.9;
+}
+
+/* 矢印ボタン本体 */
+.navButton {
+  position: absolute;
+
+  /* 2枚目画像に合わせてカード下端よりさらに下に配置 */
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* 中央カードを基準にした左右の配置位置（間隔に合わせて調整） */
+.prevButton {
+  /* 中央(50%)から中央カード幅の半分(160px) + カード間の隙間の中央付近へ */
+  left: calc(50% - 160px - 44px);
+}
+
+.nextButton {
+  right: calc(50% - 160px - 44px);
+}
+
+/* 矢印サイズ（全体の拡大縮小アニメーションは削除して固定） */
+.iconWrapper {
+  position: relative;
+  display: inline-block;
+  width: 54px;
+  height: 54px;
+}
+
+/* 背面の水色シャドウ三角（動かさずに固定） */
+.arrowShadow {
+  position: absolute;
+  z-index: 1;
+  font-size: 54px;
+  line-height: 1;
+  color: var(--color-primary); /* 水色 */
+}
+
+.arrowShadow svg {
+  width: 54px;
+  height: 54px;
+  fill: currentcolor;
+}
+
+/* 水色シャドウの位置オフセット */
+.arrowShadowRight {
+  top: 6px;
+  left: 6px;
+}
+
+.arrowShadowLeft {
+  top: 6px;
+  left: -6px; /* 左矢印の場合は左下へ */
+}
+
+/* 前面のオレンジ三角（これだけに押し込み・アニメーションを付与） */
+.arrowMain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  font-size: 54px;
+  line-height: 1;
+  color: var(--color-accent); /* オレンジ */
+  transition: transform 0.1s ease; /* 押し込み時のなめらかさ */
+}
+
+.arrowMain svg {
+  width: 54px;
+  height: 54px;
+  fill: currentcolor;
+}
+
+/* ★ オレンジ部分だけの押し込みアニメーション */
+
+/* 左矢印ボタン押下時: オレンジ三角が水色の影（左下）に向かって沈み込む */
+.prevButton:active .arrowMain {
+  transform: translate(-5px, 5px);
+}
+
+/* 右矢印ボタン押下時: オレンジ三角が水色の影（右下）に向かって沈み込む */
+.nextButton:active .arrowMain {
+  transform: translate(5px, 5px);
+}
