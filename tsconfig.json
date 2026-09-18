@@ -4,7 +4,7 @@
     "target": "esnext",
     "lib": ["esnext", "dom", "dom.iterable"],
     "jsx": "react-jsx",
-    "types": ["node", "vite-plus/client"],
+    "types": ["node", "vite-plus/client", "vite-plugin-svgr/client"],
     "noEmit": true,
     "allowImportingTsExtensions": true,
 
