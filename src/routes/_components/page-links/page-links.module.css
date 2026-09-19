@@ -2,16 +2,18 @@
 
 .links {
   display: grid;
-  grid-template-columns: repeat(4, 160px);
-  grid-auto-rows: 160px;
+  grid-template-columns: repeat(4, minmax(0, 160px));
   gap: 48px;
   justify-content: center;
 
   @media (--mobile) {
-    grid-template-columns: repeat(2, min(160px, 42vw));
-    grid-auto-rows: min(160px, 42vw);
+    grid-template-columns: repeat(2, minmax(0, 160px));
     gap: 32px;
   }
+}
+
+.link {
+  aspect-ratio: 1;
 }
 
 .icon {
