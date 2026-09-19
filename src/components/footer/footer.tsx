@@ -4,6 +4,7 @@ import { IconBrandInstagram, IconBrandX } from '../icons'
 
 import styles from './footer.module.css'
 
+// 協賛企業一覧は仮データ
 const SPONSORS = [
   'アミカ　赤羽西口店',
   '株式会社カレッジヤード',
@@ -25,6 +26,7 @@ const SPONSORS = [
   'ショッピングセンター ビビオ',
 ] as const
 
+// 後援一覧は仮データ
 const SUPPORTERS = ['東洋大学', '東洋大学甫水会', '東洋大学校友会', '西赤羽商店街連合会'] as const
 
 const CONTACT_EMAIL = 'support@akabanedai-fes.com'
