@@ -5,6 +5,13 @@
   justify-content: center;
 }
 
+.icon {
+  flex: 0 0 auto;
+  width: 96px;
+  height: 96px;
+  color: var(--color-primary);
+}
+
 @media (width <= 1400px) {
   .links {
     grid-template-columns: repeat(2, 160px);
@@ -15,5 +22,10 @@
   .links {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+
+  .icon {
+    width: 42%;
+    height: 42%;
   }
 }

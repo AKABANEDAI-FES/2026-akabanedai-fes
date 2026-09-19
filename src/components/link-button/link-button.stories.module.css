@@ -1,0 +1,6 @@
+.icon {
+  flex: 0 0 auto;
+  width: 96px;
+  height: 96px;
+  color: var(--color-primary);
+}

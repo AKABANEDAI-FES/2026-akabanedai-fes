@@ -12,8 +12,9 @@ const links = [
 
 export const PageLinks = () => (
   <nav className={styles.links} aria-label="ページリンク">
-    {links.map(({ label, to, icon }) => (
-      <LinkButton key={label} to={to} icon={icon}>
+    {links.map(({ label, to, icon: Icon }) => (
+      <LinkButton key={label} to={to}>
+        <Icon className={styles.icon} aria-hidden="true" focusable="false" />
         {label}
       </LinkButton>
     ))}

@@ -29,23 +29,10 @@
   outline-offset: 3px;
 }
 
-.icon {
-  flex: 0 0 auto;
-  width: 96px;
-  height: 96px;
-  color: var(--color-primary);
-  white-space: nowrap;
-}
-
 @media (width <= 640px) {
   .link {
     width: min(160px, 42vw);
     height: min(160px, 42vw);
     font-size: 16px;
-  }
-
-  .icon {
-    width: 42%;
-    height: 42%;
   }
 }
