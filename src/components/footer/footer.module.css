@@ -46,7 +46,7 @@
 }
 
 .sponsorItem:not(:last-child)::after {
-  content: ' /';
+  content: ' /' / '';
 }
 
 .section {
