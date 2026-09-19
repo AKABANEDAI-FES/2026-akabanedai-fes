@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 
 import { CampusMap } from './_components/campus-map/campus-map'
+
 export const Route = createFileRoute('/')({
   component: () => (
     <main>
