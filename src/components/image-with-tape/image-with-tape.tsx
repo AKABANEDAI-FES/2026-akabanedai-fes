@@ -28,17 +28,14 @@ export const ImageWithTape: FC<ImageWithTapeProps> = ({
     <Tape
       className={cn(styles.commonTape, styles.topLeftTape)}
       variant={tapeVariants.topLeft ?? 'striped'}
-      aria-hidden="true"
     />
     <Tape
       className={cn(styles.commonTape, styles.bottomRightBackTape)}
       variant={tapeVariants.bottomRightBack ?? 'dark'}
-      aria-hidden="true"
     />
     <Tape
       className={cn(styles.commonTape, styles.bottomRightFrontTape)}
       variant={tapeVariants.bottomRightFront ?? 'translucent'}
-      aria-hidden="true"
     />
   </div>
 )
