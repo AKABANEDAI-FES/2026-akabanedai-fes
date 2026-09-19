@@ -52,7 +52,7 @@ export const Footer: FC = () => (
       </div>
 
       <div className={styles.section}>
-        <h3 className={styles.subHeading}>後援</h3>
+        <h2 className={styles.subHeading}>後援</h2>
         <ul className={styles.nameList}>
           {SUPPORTERS.map((supporter) => (
             <li key={supporter} className={styles.nameItem}>
@@ -63,7 +63,7 @@ export const Footer: FC = () => (
       </div>
 
       <div className={styles.section}>
-        <p className={styles.text}>お問い合わせはこちら</p>
+        <h2 className={styles.subHeading}>お問い合わせはこちら</h2>
         <p className={styles.text}>
           <a className={styles.link} href={`mailto:${CONTACT_EMAIL}`}>
             {CONTACT_EMAIL}
