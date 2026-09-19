@@ -12,7 +12,7 @@ type LinkButtonProps = Omit<ComponentProps<typeof Link>, 'children' | 'to'> & {
 
 export const LinkButton = ({ children, icon: Icon, className, ...linkProps }: LinkButtonProps) => (
   <Link className={[styles.link, className].filter(Boolean).join(' ')} {...linkProps}>
-    <Icon className={styles.icon} width={24} height={24} aria-hidden="true" />
+    <Icon className={styles.icon} aria-hidden="true" />
     <span>{children}</span>
   </Link>
 )
