@@ -24,6 +24,7 @@ export default {
     {
       files: ['**/*.module.css'],
       rules: {
+        'media-feature-name-disallowed-list': ['width', 'min-width', 'max-width'],
         'color-no-hex': true,
         'color-named': 'never',
         'scale-unlimited/declaration-strict-value': [
