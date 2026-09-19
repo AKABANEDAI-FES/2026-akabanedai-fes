@@ -1,6 +1,6 @@
 .footer {
-  --footer-bg: #62d2f2;
-  --footer-fg: #252521;
+  --footer-bg: var(--color-primary);
+  --footer-fg: var(--color-foreground);
 
   padding: 48px 24px 40px;
   color: var(--footer-fg);
