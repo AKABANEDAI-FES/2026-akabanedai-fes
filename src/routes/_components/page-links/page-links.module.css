@@ -2,13 +2,13 @@
 
 .links {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 160px));
-  gap: 24px;
+  grid-template-columns: repeat(4, minmax(0, 10rem));
+  gap: 1.5rem;
   justify-content: center;
-  padding-inline: 24px;
+  padding-inline: 1.5rem;
 
   @media (--mobile) {
-    grid-template-columns: repeat(2, minmax(0, 160px));
+    grid-template-columns: repeat(2, minmax(0, 10rem));
   }
 }
 
@@ -18,8 +18,8 @@
 
 .icon {
   flex: 0 0 auto;
-  width: 96px;
-  height: 96px;
+  width: 6rem;
+  height: 6rem;
   color: var(--color-primary);
 
   @media (--mobile) {

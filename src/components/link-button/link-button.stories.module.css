@@ -1,11 +1,11 @@
 .link {
-  width: 160px;
-  height: 160px;
+  width: 10rem;
+  height: 10rem;
 }
 
 .icon {
   flex: 0 0 auto;
-  width: 96px;
-  height: 96px;
+  width: 6rem;
+  height: 6rem;
   color: var(--color-primary);
 }
