@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from '@storybook/tanstack-react'
 import { ImageWithTape } from './image-with-tape'
 
 const meta = {
+  title: 'Components/ImageWithTape',
   component: ImageWithTape,
   tags: ['autodocs'],
 } satisfies Meta<typeof ImageWithTape>

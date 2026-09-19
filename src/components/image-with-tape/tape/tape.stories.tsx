@@ -5,6 +5,7 @@ import { Tape } from './tape'
 import styles from './tape.stories.module.css'
 
 const meta = {
+  title: 'Components/ImageWithTape/Tape',
   component: Tape,
   tags: ['autodocs'],
   args: {
