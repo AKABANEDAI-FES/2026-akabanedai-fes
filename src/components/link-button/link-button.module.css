@@ -1,3 +1,5 @@
+@import url('../../styles/media.css');
+
 .link {
   display: inline-flex;
   flex-direction: column;
@@ -28,7 +30,7 @@
     outline-offset: 3px;
   }
 
-  @media (width <= 640px) {
+  @media (--mobile) {
     width: min(160px, 42vw);
     height: min(160px, 42vw);
     font-size: 16px;

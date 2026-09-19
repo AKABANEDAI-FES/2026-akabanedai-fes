@@ -1,15 +1,13 @@
+@import url('../../../styles/media.css');
+
 .links {
   display: grid;
   grid-template-columns: repeat(4, 160px);
   gap: 48px;
   justify-content: center;
 
-  @media (width <= 1400px) {
+  @media (--mobile) {
     grid-template-columns: repeat(2, 160px);
-  }
-
-  @media (width <= 640px) {
-    grid-template-columns: 1fr;
     gap: 32px;
   }
 }
@@ -20,7 +18,7 @@
   height: 96px;
   color: var(--color-primary);
 
-  @media (width <= 640px) {
+  @media (--mobile) {
     width: 42%;
     height: 42%;
   }
