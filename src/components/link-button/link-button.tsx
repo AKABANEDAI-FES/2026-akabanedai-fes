@@ -1,5 +1,5 @@
 import { createLink } from '@tanstack/react-router'
-import type { ComponentProps } from 'react'
+import type { ComponentProps, FC } from 'react'
 
 import { cn } from '../../utils/cn'
 
@@ -7,7 +7,7 @@ import styles from './link-button.module.css'
 
 type LinkButtonBaseProps = ComponentProps<'a'>
 
-const LinkButtonBase = ({ className, ...anchorProps }: LinkButtonBaseProps) => (
+const LinkButtonBase: FC<LinkButtonBaseProps> = ({ className, ...anchorProps }) => (
   <a className={cn(styles.link, className)} {...anchorProps} />
 )
 

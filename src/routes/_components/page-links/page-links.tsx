@@ -1,5 +1,5 @@
 import type { LinkProps } from '@tanstack/react-router'
-import type { ComponentType, SVGProps } from 'react'
+import type { ComponentType, FC, SVGProps } from 'react'
 
 import { IconItemSearch, IconMap, IconTimetable, IconUser } from '../../../components/icons'
 import { LinkButton } from '../../../components/link-button/link-button'
@@ -19,7 +19,7 @@ const links = [
   { label: 'パンフレット', to: '/', icon: IconMap },
 ] as const satisfies readonly PageLink[]
 
-export const PageLinks = () => (
+export const PageLinks: FC = () => (
   <nav className={styles.links} aria-label="ページリンク">
     {links.map(({ label, to, icon: Icon }) => (
       <LinkButton key={label} to={to} className={styles.link}>
