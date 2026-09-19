@@ -1,6 +1,8 @@
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import type { ReactNode } from 'react'
 
+import { Footer } from '../components/footer/footer'
+
 import globalCssUrl from '../styles/global.css?url'
 import styles from './__root.module.css'
 
@@ -20,7 +22,10 @@ const RootDocument = ({ children }: RootDocumentProps) => (
       <HeadContent />
     </head>
     <body>
-      <div className={styles.root}>{children}</div>
+      <div className={styles.root}>
+        {children}
+        <Footer />
+      </div>
       <Scripts />
     </body>
   </html>
