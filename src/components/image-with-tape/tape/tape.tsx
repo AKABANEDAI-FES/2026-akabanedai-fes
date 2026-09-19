@@ -1,4 +1,3 @@
-import commonStyles from '../image-with-tape.module.css'
 import styles from './tape.module.css'
 
 export type TapeVariant = 'striped' | 'dark' | 'translucent'
@@ -15,9 +14,5 @@ type TapeProps = {
 }
 
 export function Tape({ variant, className }: TapeProps) {
-  return (
-    <span
-      className={`${commonStyles.commonTape} ${variantStyles[variant]} ${className ?? ''}`.trim()}
-    />
-  )
+  return <span className={`${styles.tape} ${variantStyles[variant]} ${className ?? ''}`.trim()} />
 }
