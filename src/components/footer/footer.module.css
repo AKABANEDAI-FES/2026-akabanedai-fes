@@ -1,11 +1,8 @@
 .footer {
-  --footer-bg: rgb(98 210 242);
-  --footer-fg: rgb(37 37 33);
-
   padding: 48px 24px 40px;
-  color: var(--footer-fg);
+  color: var(--color-foreground);
   text-align: center;
-  background-color: var(--footer-bg);
+  background-color: var(--color-primary);
 }
 
 .inner {
@@ -76,7 +73,7 @@
 
 .link:focus-visible,
 .socialLink:focus-visible {
-  outline: 2px solid var(--footer-fg);
+  outline: 2px solid var(--color-foreground);
   outline-offset: 4px;
 }
 
