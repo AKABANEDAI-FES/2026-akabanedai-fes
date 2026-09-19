@@ -8,7 +8,7 @@ const campusMapImage =
   'https://placehold.jp/ababab/ffffff/1600x900.png?text=%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%91%E3%82%B9%E3%83%9E%E3%83%83%E3%83%97'
 
 export const CampusMap: FC = () => (
-  <section className={styles.map}>
+  <section className={styles.map} aria-label="キャンパスマップ">
     <ImageWithTape
       src={campusMapImage}
       alt="赤羽台祭のキャンパスマップ"
