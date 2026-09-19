@@ -9,6 +9,7 @@ export default {
   plugins: ['stylelint-declaration-strict-value', 'stylelint-value-no-unknown-custom-properties'],
 
   rules: {
+    'value-keyword-case': ['lower', { ignoreProperties: ['composes'] }],
     'selector-pseudo-class-no-unknown': [true, { ignorePseudoClasses: ['global', 'local'] }],
     'selector-class-pattern': [
       '^[a-z][a-zA-Z0-9]*$',
