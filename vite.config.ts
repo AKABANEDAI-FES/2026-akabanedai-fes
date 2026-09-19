@@ -44,6 +44,14 @@ export default defineConfig({
       },
     },
   },
+  css: {
+    transformer: 'lightningcss',
+    lightningcss: {
+      drafts: {
+        customMedia: true,
+      },
+    },
+  },
   plugins: [
     heyApiPlugin({
       config: {
