@@ -76,7 +76,7 @@ export const Footer: FC = () => (
           href={X_URL}
           target="_blank"
           rel="noreferrer noopener"
-          aria-label="X（旧Twitter）"
+          aria-label="X (旧 Twitter)"
         >
           <IconBrandX aria-hidden="true" focusable="false" />
         </a>
@@ -97,7 +97,7 @@ export const Footer: FC = () => (
         </Link>
       </p>
 
-      <p className={styles.copyright}>&copy;2026 東洋赤羽台祭実行委員会</p>
+      <p className={styles.copyright}>©2026 東洋赤羽台祭実行委員会</p>
     </div>
   </footer>
 )
