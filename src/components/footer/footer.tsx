@@ -27,30 +27,20 @@ const SUPPORTERS = ['東洋大学', '東洋大学甫水会', '東洋大学校友
 
 const CONTACT_EMAIL = 'support@akabanedai-fes.com'
 
-type FooterProps = {
-  sponsors?: readonly string[]
-  supporters?: readonly string[]
-  email?: string
-  xUrl?: string
-  instagramUrl?: string
-  privacyPolicyUrl?: string
-}
+const X_URL = 'https://x.com/akabanedaifes/'
 
-export function Footer({
-  sponsors = SPONSORS,
-  supporters = SUPPORTERS,
-  email = CONTACT_EMAIL,
-  xUrl = 'https://x.com/akabanedaifes/',
-  instagramUrl = 'https://www.instagram.com/akabanedaifes/',
-  privacyPolicyUrl = '/privacy-policy',
-}: FooterProps) {
+const INSTAGRAM_URL = 'https://www.instagram.com/akabanedaifes/'
+
+const PRIVACY_POLICY_URL = '/privacy-policy'
+
+export function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <section className={styles.sponsors}>
           <h2 className={styles.heading}>協賛企業様</h2>
           <p className={styles.sponsorList}>
-            {sponsors.map((sponsor) => (
+            {SPONSORS.map((sponsor) => (
               <span key={sponsor} className={styles.sponsorItem}>
                 {sponsor}
               </span>
@@ -60,14 +50,14 @@ export function Footer({
 
         <section className={styles.section}>
           <h3 className={styles.subHeading}>後援</h3>
-          <p className={styles.text}>{supporters.join('/')}</p>
+          <p className={styles.text}>{SUPPORTERS.join('/')}</p>
         </section>
 
         <section className={styles.section}>
           <p className={styles.text}>お問い合わせはこちら</p>
           <p className={styles.text}>
-            <a className={styles.link} href={`mailto:${email}`}>
-              {email}
+            <a className={styles.link} href={`mailto:${CONTACT_EMAIL}`}>
+              {CONTACT_EMAIL}
             </a>
           </p>
         </section>
@@ -75,7 +65,7 @@ export function Footer({
         <nav className={styles.social} aria-label="公式SNS">
           <a
             className={styles.socialLink}
-            href={xUrl}
+            href={X_URL}
             target="_blank"
             rel="noreferrer noopener"
             aria-label="X（旧Twitter）"
@@ -84,7 +74,7 @@ export function Footer({
           </a>
           <a
             className={styles.socialLink}
-            href={instagramUrl}
+            href={INSTAGRAM_URL}
             target="_blank"
             rel="noreferrer noopener"
             aria-label="Instagram"
@@ -94,7 +84,7 @@ export function Footer({
         </nav>
 
         <p className={styles.text}>
-          <a className={styles.link} href={privacyPolicyUrl}>
+          <a className={styles.link} href={PRIVACY_POLICY_URL}>
             プライバシーポリシー
           </a>
         </p>
