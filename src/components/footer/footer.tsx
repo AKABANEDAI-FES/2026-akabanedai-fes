@@ -78,7 +78,7 @@ export const Footer: FC = () => (
           rel="noreferrer noopener"
           aria-label="X (旧 Twitter)"
         >
-          <IconBrandX aria-hidden="true" focusable="false" />
+          <IconBrandX className={styles.socialIcon} aria-hidden="true" focusable="false" />
         </a>
         <a
           className={styles.socialLink}
@@ -87,7 +87,7 @@ export const Footer: FC = () => (
           rel="noreferrer noopener"
           aria-label="Instagram"
         >
-          <IconBrandInstagram aria-hidden="true" focusable="false" />
+          <IconBrandInstagram className={styles.socialIcon} aria-hidden="true" focusable="false" />
         </a>
       </nav>
 
