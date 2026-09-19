@@ -15,7 +15,7 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    href: '/',
+    to: '/',
     children: '企画一覧',
     icon: IconItemSearch,
   },
