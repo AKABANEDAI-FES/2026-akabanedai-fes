@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/tanstack-react'
 
-import campusMapImage from './campas_map1600x900.png'
 import { ImageWithTape } from './image-with-tape'
 
 const meta = {
@@ -12,9 +11,9 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-export const CampusMap: Story = {
+export const Default: Story = {
   args: {
-    src: campusMapImage,
-    alt: 'キャンパスマップ',
+    src: 'https://placehold.jp/ababab/ffffff/1600x900.png?text=%E7%94%BB%E5%83%8F',
+    alt: 'サンプル画像',
   },
 }
