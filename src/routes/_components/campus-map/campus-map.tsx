@@ -8,7 +8,14 @@ const campusMapImage =
 export function CampusMap() {
   return (
     <section className={styles.map}>
-      <ImageWithTape src={campusMapImage} alt="赤羽台祭のキャンパスマップ" />
+      <ImageWithTape
+        src={campusMapImage}
+        alt="赤羽台祭のキャンパスマップ"
+        width={1600}
+        height={900}
+        loading="lazy"
+        decoding="async"
+      />
     </section>
   )
 }
