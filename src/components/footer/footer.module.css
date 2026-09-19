@@ -25,32 +25,30 @@
   font-weight: 700;
 }
 
-.sponsors {
+.section {
   margin-bottom: 44px;
 }
 
-.sponsorList {
+.nameList {
   display: flex;
   flex-wrap: wrap;
   gap: 4px 8px;
   justify-content: center;
+  padding: 0;
   margin: 0;
   font-size: var(--font-size-sm);
   line-height: 2;
   text-align: center;
   letter-spacing: 0.02em;
+  list-style: none;
 }
 
-.sponsorItem {
+.nameItem {
   white-space: nowrap;
 }
 
-.sponsorItem:not(:last-child)::after {
+.nameItem:not(:last-child)::after {
   content: ' /' / '';
-}
-
-.section {
-  margin-bottom: 44px;
 }
 
 .text {

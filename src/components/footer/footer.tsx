@@ -40,20 +40,26 @@ const PRIVACY_POLICY_URL = '/privacy-policy'
 export const Footer: FC = () => (
   <footer className={styles.footer}>
     <div className={styles.inner}>
-      <div className={styles.sponsors}>
+      <div className={styles.section}>
         <h2 className={styles.heading}>協賛企業様</h2>
-        <p className={styles.sponsorList}>
+        <ul className={styles.nameList}>
           {SPONSORS.map((sponsor) => (
-            <span key={sponsor} className={styles.sponsorItem}>
+            <li key={sponsor} className={styles.nameItem}>
               {sponsor}
-            </span>
+            </li>
           ))}
-        </p>
+        </ul>
       </div>
 
       <div className={styles.section}>
         <h3 className={styles.subHeading}>後援</h3>
-        <p className={styles.text}>{SUPPORTERS.join('/')}</p>
+        <ul className={styles.nameList}>
+          {SUPPORTERS.map((supporter) => (
+            <li key={supporter} className={styles.nameItem}>
+              {supporter}
+            </li>
+          ))}
+        </ul>
       </div>
 
       <div className={styles.section}>
