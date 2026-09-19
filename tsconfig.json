@@ -9,7 +9,7 @@
     "allowImportingTsExtensions": true,
 
     "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": false,
+    "exactOptionalPropertyTypes": true,
 
     "strict": true,
     "verbatimModuleSyntax": true,
