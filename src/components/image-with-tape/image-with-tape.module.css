@@ -7,7 +7,7 @@
   width: 100%;
 }
 
-.commonTape {
+.tape {
   position: absolute;
   z-index: 1;
   width: 37.5%;
@@ -16,7 +16,7 @@
 }
 
 .topLeftTape {
-  composes: commonTape;
+  composes: tape;
   top: -5%;
   left: -15%;
   width: 34.5%;
@@ -24,14 +24,14 @@
 }
 
 .bottomRightBackTape {
-  composes: commonTape;
+  composes: tape;
   right: -13%;
   bottom: -1%;
   transform: rotate(-28deg);
 }
 
 .bottomRightFrontTape {
-  composes: commonTape;
+  composes: tape;
   right: -13%;
   bottom: 3%;
   z-index: 2;
