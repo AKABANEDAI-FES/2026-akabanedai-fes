@@ -18,5 +18,5 @@ type TapeProps = {
 }
 
 export const Tape: FC<TapeProps> = ({ variant, className }) => (
-  <span className={cn(styles.tape, variantStyles[variant], className)} />
+  <span className={cn(variantStyles[variant], className)} />
 )

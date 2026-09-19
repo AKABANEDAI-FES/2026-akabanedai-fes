@@ -25,16 +25,10 @@ export const ImageWithTape: FC<ImageWithTapeProps> = ({
 }) => (
   <div className={cn(styles.wrapper, className)}>
     <img className={styles.image} src={src} alt={alt} {...imageProps} />
+    <Tape className={styles.topLeftTape} variant={tapeVariants.topLeft ?? 'striped'} />
+    <Tape className={styles.bottomRightBackTape} variant={tapeVariants.bottomRightBack ?? 'dark'} />
     <Tape
-      className={cn(styles.commonTape, styles.topLeftTape)}
-      variant={tapeVariants.topLeft ?? 'striped'}
-    />
-    <Tape
-      className={cn(styles.commonTape, styles.bottomRightBackTape)}
-      variant={tapeVariants.bottomRightBack ?? 'dark'}
-    />
-    <Tape
-      className={cn(styles.commonTape, styles.bottomRightFrontTape)}
+      className={styles.bottomRightFrontTape}
       variant={tapeVariants.bottomRightFront ?? 'translucent'}
     />
   </div>

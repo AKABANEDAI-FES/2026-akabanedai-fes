@@ -8,36 +8,31 @@
 }
 
 .commonTape {
-  width: 37.5%;
-  height: 16%;
-}
-
-.topLeftTape,
-.bottomRightBackTape,
-.bottomRightFrontTape {
   position: absolute;
   z-index: 1;
+  width: 37.5%;
+  height: 16%;
   pointer-events: none;
 }
 
 .topLeftTape {
+  composes: commonTape;
   top: -5%;
   left: -15%;
   width: 34.5%;
   transform: rotate(-38deg);
 }
 
-.bottomRightBackTape,
-.bottomRightFrontTape {
-  right: -13%;
-}
-
 .bottomRightBackTape {
+  composes: commonTape;
+  right: -13%;
   bottom: -1%;
   transform: rotate(-28deg);
 }
 
 .bottomRightFrontTape {
+  composes: commonTape;
+  right: -13%;
   bottom: 3%;
   z-index: 2;
   transform: translateX(2%) rotate(-47deg);
