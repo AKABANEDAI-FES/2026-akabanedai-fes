@@ -40,7 +40,7 @@ const PRIVACY_POLICY_URL = '/privacy-policy'
 export const Footer: FC = () => (
   <footer className={styles.footer}>
     <div className={styles.inner}>
-      <section className={styles.sponsors}>
+      <div className={styles.sponsors}>
         <h2 className={styles.heading}>協賛企業様</h2>
         <p className={styles.sponsorList}>
           {SPONSORS.map((sponsor) => (
@@ -49,21 +49,21 @@ export const Footer: FC = () => (
             </span>
           ))}
         </p>
-      </section>
+      </div>
 
-      <section className={styles.section}>
+      <div className={styles.section}>
         <h3 className={styles.subHeading}>後援</h3>
         <p className={styles.text}>{SUPPORTERS.join('/')}</p>
-      </section>
+      </div>
 
-      <section className={styles.section}>
+      <div className={styles.section}>
         <p className={styles.text}>お問い合わせはこちら</p>
         <p className={styles.text}>
           <a className={styles.link} href={`mailto:${CONTACT_EMAIL}`}>
             {CONTACT_EMAIL}
           </a>
         </p>
-      </section>
+      </div>
 
       <nav className={styles.social} aria-label="公式SNS">
         <a
