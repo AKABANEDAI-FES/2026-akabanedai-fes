@@ -1,5 +1,7 @@
 import type { FC } from 'react'
 
+import { cn } from '../../../utils/cn'
+
 import styles from './tape.module.css'
 
 export type TapeVariant = 'striped' | 'dark' | 'translucent'
@@ -16,5 +18,5 @@ type TapeProps = {
 }
 
 export const Tape: FC<TapeProps> = ({ variant, className }) => (
-  <span className={`${styles.tape} ${variantStyles[variant]} ${className ?? ''}`.trim()} />
+  <span className={cn(styles.tape, variantStyles[variant], className)} />
 )

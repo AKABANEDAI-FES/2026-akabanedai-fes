@@ -1,5 +1,6 @@
 import type { FC, ImgHTMLAttributes } from 'react'
 
+import { cn } from '../../utils/cn'
 import { Tape, type TapeVariant } from './tape/tape'
 
 import styles from './image-with-tape.module.css'
@@ -22,20 +23,20 @@ export const ImageWithTape: FC<ImageWithTapeProps> = ({
   tapeVariants = {},
   ...imageProps
 }) => (
-  <div className={`${styles.wrapper} ${className ?? ''}`.trim()}>
+  <div className={cn(styles.wrapper, className)}>
     <img className={styles.image} src={src} alt={alt} {...imageProps} />
     <Tape
-      className={[styles.commonTape, styles.topLeftTape].join(' ')}
+      className={cn(styles.commonTape, styles.topLeftTape)}
       variant={tapeVariants.topLeft ?? 'striped'}
       aria-hidden="true"
     />
     <Tape
-      className={[styles.commonTape, styles.bottomRightBackTape].join(' ')}
+      className={cn(styles.commonTape, styles.bottomRightBackTape)}
       variant={tapeVariants.bottomRightBack ?? 'dark'}
       aria-hidden="true"
     />
     <Tape
-      className={[styles.commonTape, styles.bottomRightFrontTape].join(' ')}
+      className={cn(styles.commonTape, styles.bottomRightFrontTape)}
       variant={tapeVariants.bottomRightFront ?? 'translucent'}
       aria-hidden="true"
     />
