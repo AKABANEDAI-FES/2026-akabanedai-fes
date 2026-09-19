@@ -1,3 +1,4 @@
+import { Link } from '@tanstack/react-router'
 import type { FC } from 'react'
 
 import { IconBrandInstagram, IconBrandX } from '../icons'
@@ -34,8 +35,6 @@ const CONTACT_EMAIL = 'support@akabanedai-fes.com'
 const X_URL = 'https://x.com/akabanedaifes/'
 
 const INSTAGRAM_URL = 'https://www.instagram.com/akabanedaifes/'
-
-const PRIVACY_POLICY_URL = '/privacy-policy'
 
 export const Footer: FC = () => (
   <footer className={styles.footer}>
@@ -93,9 +92,9 @@ export const Footer: FC = () => (
       </nav>
 
       <p className={styles.text}>
-        <a className={styles.link} href={PRIVACY_POLICY_URL}>
+        <Link className={styles.link} to="/">
           プライバシーポリシー
-        </a>
+        </Link>
       </p>
 
       <p className={styles.copyright}>&copy;2026 東洋赤羽台祭実行委員会</p>
