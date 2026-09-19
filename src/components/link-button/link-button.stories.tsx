@@ -27,3 +27,10 @@ export const Default: Story = {
     ),
   },
 }
+
+export const WithoutIcon: Story = {
+  args: {
+    to: '/',
+    children: 'もっと見る',
+  },
+}
