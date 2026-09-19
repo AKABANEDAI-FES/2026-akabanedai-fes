@@ -18,6 +18,7 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     to: '/',
+    className: styles.link,
     children: (
       <>
         <IconItemSearch className={styles.icon} aria-hidden="true" focusable="false" />

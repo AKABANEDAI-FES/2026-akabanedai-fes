@@ -3,11 +3,13 @@
 .links {
   display: grid;
   grid-template-columns: repeat(4, 160px);
+  grid-auto-rows: 160px;
   gap: 48px;
   justify-content: center;
 
   @media (--mobile) {
-    grid-template-columns: repeat(2, 160px);
+    grid-template-columns: repeat(2, min(160px, 42vw));
+    grid-auto-rows: min(160px, 42vw);
     gap: 32px;
   }
 }

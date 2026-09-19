@@ -1,3 +1,8 @@
+.link {
+  width: 160px;
+  height: 160px;
+}
+
 .icon {
   flex: 0 0 auto;
   width: 96px;
