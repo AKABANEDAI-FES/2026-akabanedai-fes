@@ -1,3 +1,5 @@
+import type { FC } from 'react'
+
 import { IconBrandInstagram, IconBrandX } from '../icons'
 
 import styles from './footer.module.css'
@@ -33,66 +35,62 @@ const INSTAGRAM_URL = 'https://www.instagram.com/akabanedaifes/'
 
 const PRIVACY_POLICY_URL = '/privacy-policy'
 
-export function Footer() {
-  return (
-    <footer className={styles.footer}>
-      <div className={styles.inner}>
-        <section className={styles.sponsors}>
-          <h2 className={styles.heading}>協賛企業様</h2>
-          <p className={styles.sponsorList}>
-            {SPONSORS.map((sponsor) => (
-              <span key={sponsor} className={styles.sponsorItem}>
-                {sponsor}
-              </span>
-            ))}
-          </p>
-        </section>
+export const Footer: FC = () => (
+  <footer className={styles.footer}>
+    <div className={styles.inner}>
+      <section className={styles.sponsors}>
+        <h2 className={styles.heading}>協賛企業様</h2>
+        <p className={styles.sponsorList}>
+          {SPONSORS.map((sponsor) => (
+            <span key={sponsor} className={styles.sponsorItem}>
+              {sponsor}
+            </span>
+          ))}
+        </p>
+      </section>
 
-        <section className={styles.section}>
-          <h3 className={styles.subHeading}>後援</h3>
-          <p className={styles.text}>{SUPPORTERS.join('/')}</p>
-        </section>
+      <section className={styles.section}>
+        <h3 className={styles.subHeading}>後援</h3>
+        <p className={styles.text}>{SUPPORTERS.join('/')}</p>
+      </section>
 
-        <section className={styles.section}>
-          <p className={styles.text}>お問い合わせはこちら</p>
-          <p className={styles.text}>
-            <a className={styles.link} href={`mailto:${CONTACT_EMAIL}`}>
-              {CONTACT_EMAIL}
-            </a>
-          </p>
-        </section>
-
-        <nav className={styles.social} aria-label="公式SNS">
-          <a
-            className={styles.socialLink}
-            href={X_URL}
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="X（旧Twitter）"
-          >
-            <IconBrandX aria-hidden="true" focusable="false" />
-          </a>
-          <a
-            className={styles.socialLink}
-            href={INSTAGRAM_URL}
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="Instagram"
-          >
-            <IconBrandInstagram aria-hidden="true" focusable="false" />
-          </a>
-        </nav>
-
+      <section className={styles.section}>
+        <p className={styles.text}>お問い合わせはこちら</p>
         <p className={styles.text}>
-          <a className={styles.link} href={PRIVACY_POLICY_URL}>
-            プライバシーポリシー
+          <a className={styles.link} href={`mailto:${CONTACT_EMAIL}`}>
+            {CONTACT_EMAIL}
           </a>
         </p>
+      </section>
 
-        <p className={styles.copyright}>&copy;2026 東洋赤羽台祭実行委員会</p>
-      </div>
-    </footer>
-  )
-}
+      <nav className={styles.social} aria-label="公式SNS">
+        <a
+          className={styles.socialLink}
+          href={X_URL}
+          target="_blank"
+          rel="noreferrer noopener"
+          aria-label="X（旧Twitter）"
+        >
+          <IconBrandX aria-hidden="true" focusable="false" />
+        </a>
+        <a
+          className={styles.socialLink}
+          href={INSTAGRAM_URL}
+          target="_blank"
+          rel="noreferrer noopener"
+          aria-label="Instagram"
+        >
+          <IconBrandInstagram aria-hidden="true" focusable="false" />
+        </a>
+      </nav>
 
-export default Footer
+      <p className={styles.text}>
+        <a className={styles.link} href={PRIVACY_POLICY_URL}>
+          プライバシーポリシー
+        </a>
+      </p>
+
+      <p className={styles.copyright}>&copy;2026 東洋赤羽台祭実行委員会</p>
+    </div>
+  </footer>
+)
