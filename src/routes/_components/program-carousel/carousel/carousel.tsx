@@ -45,11 +45,11 @@ export const Carousel: FC<CarouselProps> = ({ programs }) => {
         <span className={styles.iconWrapper}>
           {/* 水色の下敷き影 */}
           <span className={styles.arrowShadowLeft}>
-            <IconCaretLeft />
+            <IconCaretLeft aria-hidden="true" />
           </span>
           {/* メインのオレンジ矢印 */}
           <span className={styles.arrowMain}>
-            <IconCaretLeft />
+            <IconCaretLeft aria-hidden="true" />
           </span>
         </span>
       </button>
@@ -69,11 +69,11 @@ export const Carousel: FC<CarouselProps> = ({ programs }) => {
         <span className={styles.iconWrapper}>
           {/* 水色の下敷き影 */}
           <span className={styles.arrowShadowRight}>
-            <IconCaretRight />
+            <IconCaretRight aria-hidden="true" />
           </span>
           {/* メインのオレンジ矢印 */}
           <span className={styles.arrowMain}>
-            <IconCaretRight />
+            <IconCaretRight aria-hidden="true" />
           </span>
         </span>
       </button>

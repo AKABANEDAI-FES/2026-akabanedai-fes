@@ -42,7 +42,7 @@ export const CarouselItem: FC<CarouselItemProps> = ({ program, isActive = false 
         <span className={styles.indicatorBar} />
         <p className={styles.title}>{program.name}</p>
         <span className={styles.arrow}>
-          <IconChevronRight />
+          <IconChevronRight aria-hidden="true" />
         </span>
       </div>
     </div>
