@@ -8,7 +8,7 @@
   text-decoration: none;
   border: 1.5px solid var(--color-border);
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgb(0 0 0 / 8%);
+  box-shadow: 0 4px 10px color-mix(in oklab, var(--color-foreground) 8%, transparent);
   transition:
     transform 0.2s ease,
     background-color 0.2s ease;
@@ -59,12 +59,20 @@
   align-items: center;
   height: 48px; /* 帯の高さ */
   padding: 0;
-  background: linear-gradient(to bottom, rgb(240 240 240 / 70%) 0%, rgb(220 220 220 / 85%) 100%);
+  background: linear-gradient(
+    to bottom,
+    color-mix(in oklab, var(--color-surface) 70%, transparent) 0%,
+    color-mix(in oklab, var(--color-surface) 85%, transparent) 100%
+  );
   backdrop-filter: blur(2px);
 }
 
 .card.active .footer {
-  background: linear-gradient(to bottom, rgb(255 245 160 / 70%) 0%, rgb(245 235 120 / 85%) 100%);
+  background: linear-gradient(
+    to bottom,
+    color-mix(in oklab, var(--color-secondary) 70%, transparent) 0%,
+    color-mix(in oklab, var(--color-secondary) 85%, transparent) 100%
+  );
 }
 
 /* 左端のオレンジの縦バー */
