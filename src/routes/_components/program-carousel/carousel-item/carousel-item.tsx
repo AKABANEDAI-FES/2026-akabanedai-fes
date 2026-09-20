@@ -24,7 +24,7 @@ export const CarouselItem: FC<CarouselItemProps> = ({ program, isActive = false 
   >
     <div className={styles.inner}>
       <div className={styles.imageContainer}>
-        {program.logoUrl && (
+        {program.logoUrl !== null && (
           <img
             src={program.logoUrl}
             alt=""
