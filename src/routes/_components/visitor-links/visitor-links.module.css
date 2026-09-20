@@ -13,19 +13,19 @@
   position: absolute;
   top: 0;
   left: 0;
-  pointer-events: none;
   z-index: 0;
   max-width: 35%;
+  pointer-events: none;
   object-position: top left;
 }
 
 .bgPatternRight {
   position: absolute;
-  bottom: 0;
   right: 0;
-  pointer-events: none;
+  bottom: 0;
   z-index: 0;
   max-width: 45%;
+  pointer-events: none;
 }
 
 .list {
@@ -50,7 +50,7 @@
   background: linear-gradient(to right, var(--color-secondary), var(--color-accent));
 }
 
-@media (width <= 768px) {
+@media (width: 768px) {
   .container {
     min-height: 75svh;
   }
@@ -60,17 +60,17 @@
     left: 0;
     width: 100%;
     max-width: 70%;
-    object-position: top left;
     height: clamp(10svh, 22%, 22svh);
+    object-position: top left;
   }
 
   .bgPatternRight {
-    bottom: 0;
     right: 0;
+    bottom: 0;
     width: 100%;
     max-width: 70%;
-    max-height: none;
     height: clamp(10svh, 50%, 20svh);
+    max-height: none;
   }
 
   .list {
