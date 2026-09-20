@@ -1,4 +1,3 @@
-// src/routes/_components/program-carousel/carousel-item/carousel-item.tsx
 import { Link } from '@tanstack/react-router'
 import type { FC } from 'react'
 
@@ -24,7 +23,6 @@ export const CarouselItem: FC<CarouselItemProps> = ({ program, isActive = false 
     className={cn(styles.card, isActive && styles.active)}
   >
     <div className={styles.inner}>
-      {/* 画像エリア（上部左右が斜めにカットされる形状） */}
       <div className={styles.imageContainer}>
         {program.logoUrl && (
           <img
@@ -37,7 +35,6 @@ export const CarouselItem: FC<CarouselItemProps> = ({ program, isActive = false 
         )}
       </div>
 
-      {/* 下部タイトルバー */}
       <div className={styles.footer}>
         <span className={styles.indicatorBar} />
         <p className={styles.title}>{program.name}</p>

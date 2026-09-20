@@ -9,7 +9,6 @@
   box-shadow: 0 4px 10px color-mix(in oklab, var(--color-foreground) 8%, transparent);
   transition: background-color 0.2s ease;
 
-  /* 中央（アクティブ時）: 黄色背景 */
   &.active {
     z-index: 2;
     background-color: var(--color-secondary);
@@ -30,8 +29,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-
-  /* 上部角の斜めカット */
   clip-path: polygon(18% 0%, 82% 0%, 100% 18%, 100% 100%, 0% 100%, 0% 18%);
 }
 
@@ -41,7 +38,6 @@
   object-fit: cover;
 }
 
-/* 下部フッター（画像の上に半透明でオーバーレイさせる） */
 .footer {
   position: absolute;
   right: 0;
@@ -51,7 +47,7 @@
   display: flex;
   gap: 8px;
   align-items: center;
-  height: 48px; /* 帯の高さ */
+  height: 48px;
   background: linear-gradient(
     to bottom,
     color-mix(in oklab, var(--color-surface) 70%, transparent) 0%,
@@ -59,7 +55,6 @@
   );
   backdrop-filter: blur(2px);
 
-  /* 中央（アクティブ時）は黄色の帯にする */
   .card.active & {
     background: linear-gradient(
       to bottom,
@@ -69,7 +64,6 @@
   }
 }
 
-/* 左端のオレンジの縦バー */
 .indicatorBar {
   flex-shrink: 0;
   width: 6px;
@@ -78,7 +72,6 @@
   border-radius: 0 2px 2px 0;
 }
 
-/* 企画名テキスト */
 .title {
   flex: 1;
   margin: 0;
@@ -89,7 +82,6 @@
   white-space: nowrap;
 }
 
-/* 右端の矢印アイコン */
 .arrow {
   display: flex;
   flex-shrink: 0;

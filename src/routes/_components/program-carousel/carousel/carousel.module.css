@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   gap: 36px;
-  align-items: flex-end; /* 下揃え */
+  align-items: flex-end;
   justify-content: center;
   width: 100%;
   max-width: 1100px;
@@ -14,7 +14,6 @@
   display: flex;
 }
 
-/* 中央スライド（横幅を437pxで完全固定） */
 .centerSlide {
   composes: slide;
   z-index: 2;
@@ -22,7 +21,6 @@
   height: 335px;
 }
 
-/* 左右のスライド（横幅を402pxで完全固定） */
 .sideSlide {
   composes: slide;
   z-index: 1;
@@ -31,7 +29,6 @@
   opacity: 0.9;
 }
 
-/* 矢印ボタン本体 */
 .navButton {
   position: absolute;
   bottom: -80px;
@@ -45,11 +42,8 @@
   border: none;
 }
 
-/* 中央カードを基準にした左右の配置位置（間隔に合わせて調整） */
 .prevButton {
   composes: navButton;
-
-  /* 中央(50%)から中央カード幅の半分(160px) + カード間の隙間の中央付近へ */
   left: calc(50% - 160px - 120px);
 }
 
@@ -58,7 +52,6 @@
   right: calc(50% - 160px - 120px);
 }
 
-/* 矢印サイズ（全体の拡大縮小アニメーションは削除して固定） */
 .iconWrapper {
   position: relative;
   width: 100px;
@@ -70,14 +63,12 @@
   }
 }
 
-/* 背面の水色シャドウ三角（動かさずに固定） */
 .arrowShadow {
   position: absolute;
   z-index: 1;
   color: var(--color-primary);
 }
 
-/* 水色シャドウの位置オフセット */
 .arrowShadowRight {
   composes: arrowShadow;
   top: 9px;
@@ -90,7 +81,6 @@
   left: -6px;
 }
 
-/* 前面のオレンジ三角（これだけに押し込み・アニメーションを付与） */
 .arrowMain {
   position: absolute;
   top: 0;
@@ -99,7 +89,6 @@
   color: var(--color-accent);
   transition: transform 0.1s ease;
 
-  /* ボタン押下時: オレンジ三角が水色の影に向かって沈み込む */
   .prevButton:active & {
     transform: translate(-5px, 5px);
   }

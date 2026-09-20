@@ -1,4 +1,3 @@
-// src/routes/_components/program-carousel/carousel/carousel.tsx
 import { type FC, useState } from 'react'
 
 import { IconCaretLeft, IconCaretRight } from '../../../../components/icons'
@@ -30,12 +29,10 @@ export const Carousel: FC<CarouselProps> = ({ programs }) => {
 
   return (
     <div className={styles.container}>
-      {/* 左スライド */}
       <div className={styles.sideSlide}>
         <CarouselItem program={programs[prevIndex]!} isActive={false} />
       </div>
 
-      {/* 左ナビゲーション矢印 */}
       <button
         type="button"
         onClick={handlePrev}
@@ -43,23 +40,19 @@ export const Carousel: FC<CarouselProps> = ({ programs }) => {
         aria-label="前の企画へ"
       >
         <span className={styles.iconWrapper}>
-          {/* 水色の下敷き影 */}
           <span className={styles.arrowShadowLeft}>
             <IconCaretLeft aria-hidden="true" />
           </span>
-          {/* メインのオレンジ矢印 */}
           <span className={styles.arrowMain}>
             <IconCaretLeft aria-hidden="true" />
           </span>
         </span>
       </button>
 
-      {/* 中央スライド */}
       <div className={styles.centerSlide}>
         <CarouselItem program={programs[currentIndex]!} isActive={true} />
       </div>
 
-      {/* 右ナビゲーション矢印 */}
       <button
         type="button"
         onClick={handleNext}
@@ -67,18 +60,15 @@ export const Carousel: FC<CarouselProps> = ({ programs }) => {
         aria-label="次の企画へ"
       >
         <span className={styles.iconWrapper}>
-          {/* 水色の下敷き影 */}
           <span className={styles.arrowShadowRight}>
             <IconCaretRight aria-hidden="true" />
           </span>
-          {/* メインのオレンジ矢印 */}
           <span className={styles.arrowMain}>
             <IconCaretRight aria-hidden="true" />
           </span>
         </span>
       </button>
 
-      {/* 右スライド */}
       <div className={styles.sideSlide}>
         <CarouselItem program={programs[nextIndex]!} isActive={false} />
       </div>
