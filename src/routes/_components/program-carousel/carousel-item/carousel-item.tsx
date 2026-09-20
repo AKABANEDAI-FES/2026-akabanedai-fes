@@ -1,16 +1,14 @@
 // src/routes/_components/program-carousel/carousel-item/carousel-item.tsx
 import { Link } from '@tanstack/react-router'
 
+import type { GetProjectsResponse } from '../../../../api/akabase'
 import { IconChevronRight } from '../../../../components/icons'
 
 import styles from './carousel-item.module.css'
 
-export type Program = {
-  id: string
-  name: string
-  logoUrl?: string | null
-  organization?: { id: string; name: string } | null
-}
+type Project = GetProjectsResponse['projects'][number]
+
+export type Program = Pick<Project, 'id' | 'name' | 'logoUrl'>
 
 type Props = {
   program: Program
