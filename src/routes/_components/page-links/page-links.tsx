@@ -24,7 +24,7 @@ export const PageLinks: FC = () => (
     {links.map(({ label, to, icon: Icon }) => (
       <LinkButton key={label} to={to} variant="card" className={styles.link}>
         <Icon className={styles.icon} aria-hidden="true" focusable="false" />
-        {label}
+        <span className={styles.label}>{label}</span>
       </LinkButton>
     ))}
   </nav>

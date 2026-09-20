@@ -3,6 +3,7 @@
   gap: 8px;
   align-items: center;
   justify-content: center;
+  min-width: 0;
   padding: 6px 16px;
   font-size: var(--font-size-md);
   font-weight: 700;
