@@ -17,15 +17,15 @@
 .centerSlide {
   composes: slide;
   z-index: 2;
-  flex: 0 0 437px;
-  height: 335px;
+  flex: 0 0 min(437px, 80svw);
+  aspect-ratio: 437 / 335;
 }
 
 .sideSlide {
   composes: slide;
   z-index: 1;
-  flex: 0 0 420px;
-  height: 308px;
+  flex: 0 0 min(420px, 76svw);
+  aspect-ratio: 420 / 308;
   opacity: 0.9;
 }
 
@@ -44,12 +44,12 @@
 
 .prevButton {
   composes: navButton;
-  left: calc(50% - 160px - 120px);
+  left: max(1rem, calc(50% - 280px));
 }
 
 .nextButton {
   composes: navButton;
-  right: calc(50% - 160px - 120px);
+  right: max(1rem, calc(50% - 280px));
 }
 
 .iconWrapper {
