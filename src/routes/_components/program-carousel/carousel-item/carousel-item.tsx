@@ -26,7 +26,15 @@ export const CarouselItem: FC<CarouselItemProps> = ({ program, isActive = false 
     <div className={styles.inner}>
       {/* 画像エリア（上部左右が斜めにカットされる形状） */}
       <div className={styles.imageContainer}>
-        {program.logoUrl && <img src={program.logoUrl} alt="" className={styles.image} />}
+        {program.logoUrl && (
+          <img
+            src={program.logoUrl}
+            alt=""
+            className={styles.image}
+            loading="lazy"
+            decoding="async"
+          />
+        )}
       </div>
 
       {/* 下部タイトルバー */}
