@@ -2,28 +2,40 @@
 
 .links {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 10rem));
-  gap: 1.5rem;
+  grid-template-columns: repeat(4, min(250px, 20svw));
+  gap: min(72px, 5svw);
   justify-content: center;
-  padding-inline: 1.5rem;
+  padding-block-end: 8px;
+  padding-inline: min(24px, 2svw);
 
   @media (--mobile) {
-    grid-template-columns: repeat(2, minmax(0, 10rem));
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6svw;
+    padding-inline: 12svw;
   }
 }
 
 .link {
-  aspect-ratio: 1;
+  flex-direction: column;
+  gap: min(24px, 2svw);
+  padding: min(16px, 1svw);
+  font-size: min(28px, 2svw);
+
+  @media (--mobile) {
+    gap: 8px;
+    padding: 12px;
+    font-size: var(--font-size-md);
+  }
 }
 
 .icon {
   flex: 0 0 auto;
-  width: 6rem;
-  height: 6rem;
+  width: min(120px, 10svw);
+  height: min(120px, 10svw);
   color: var(--color-primary);
 
   @media (--mobile) {
-    width: 42%;
-    height: 42%;
+    width: 50%;
+    height: 50%;
   }
 }
