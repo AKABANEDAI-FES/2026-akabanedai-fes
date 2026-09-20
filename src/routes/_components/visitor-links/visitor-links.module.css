@@ -9,6 +9,25 @@
   background-color: var(--color-primary);
 }
 
+.bgPatternLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 0;
+  max-width: 35%;
+  object-position: top left;
+}
+
+.bgPatternRight {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 0;
+  max-width: 35%;
+}
+
 .list {
   position: relative;
   z-index: 1;
@@ -34,6 +53,24 @@
 @media (width <= 768px) {
   .container {
     min-height: 75dvh;
+  }
+
+  .bgPatternLeft {
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 70%;
+    object-position: top left;
+    height: clamp(10svh, 22%, 22svh);
+  }
+
+  .bgPatternRight {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    max-width: 70%;
+    max-height: none;
+    height: clamp(10dvh, 50%, 20dvh);
   }
 
   .list {

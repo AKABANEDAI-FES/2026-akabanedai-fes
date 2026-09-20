@@ -1,3 +1,5 @@
+import { LeftYellow } from '../../../components/icons'
+import { RightYellow } from '../../../components/icons'
 import { LinkItem } from './link-item/link-item'
 
 import styles from './visitor-links.module.css'
@@ -11,6 +13,12 @@ export const VisitorLinks = () => {
 
   return (
     <section className={styles.container}>
+      <LeftYellow className={styles.bgPatternLeft} preserveAspectRatio="none" aria-hidden="true" />
+      <RightYellow
+        className={styles.bgPatternRight}
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      />
       <ul className={styles.list}>
         {links.map((link, index) => (
           <li key={index} className={styles.listItem}>
