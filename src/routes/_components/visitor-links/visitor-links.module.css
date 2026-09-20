@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 90dvh;
+  min-height: 90svh;
   overflow: hidden;
   background-color: var(--color-primary);
 }
@@ -25,7 +25,7 @@
   right: 0;
   pointer-events: none;
   z-index: 0;
-  max-width: 35%;
+  max-width: 45%;
 }
 
 .list {
@@ -52,7 +52,7 @@
 
 @media (width <= 768px) {
   .container {
-    min-height: 75dvh;
+    min-height: 75svh;
   }
 
   .bgPatternLeft {
@@ -70,7 +70,7 @@
     width: 100%;
     max-width: 70%;
     max-height: none;
-    height: clamp(10dvh, 50%, 20dvh);
+    height: clamp(10svh, 50%, 20svh);
   }
 
   .list {

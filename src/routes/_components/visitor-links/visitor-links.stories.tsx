@@ -2,12 +2,13 @@ import type { Meta, StoryObj } from '@storybook/tanstack-react'
 
 import { VisitorLinks } from './visitor-links'
 
-const meta: Meta<typeof VisitorLinks> = {
-  title: 'Components/VisitorLinks/VisitorLinks',
+const meta = {
+  title: 'VisitorLinks',
   component: VisitorLinks,
-}
+  tags: ['autodocs'],
+} satisfies Meta<typeof VisitorLinks>
 
 export default meta
-type Story = StoryObj<typeof VisitorLinks>
+type Story = StoryObj<typeof meta>
 
 export const Default: Story = {}
