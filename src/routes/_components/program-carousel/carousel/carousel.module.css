@@ -1,7 +1,7 @@
 .container {
   position: relative;
   display: flex;
-  gap: 36px;
+  gap: min(36px, 4svw);
   align-items: flex-end;
   justify-content: center;
   width: 100%;
