@@ -12,26 +12,31 @@ type CarouselProps = {
 export const Carousel: FC<CarouselProps> = ({ programs }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
-  if (!programs || programs.length === 0) {
+  if (programs.length === 0) {
     return null
   }
 
+  const lastIndex = programs.length - 1
+
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev > 0 ? prev - 1 : programs.length - 1))
+    setCurrentIndex((prev) => (prev === 0 ? lastIndex : prev - 1))
   }
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev < programs.length - 1 ? prev + 1 : 0))
+    setCurrentIndex((prev) => (prev === lastIndex ? 0 : prev + 1))
   }
 
-  const prevIndex = (currentIndex - 1 + programs.length) % programs.length
-  const nextIndex = (currentIndex + 1) % programs.length
+  const prevProgram = programs[currentIndex === 0 ? lastIndex : currentIndex - 1]
+  const currentProgram = programs[currentIndex]
+  const nextProgram = programs[currentIndex === lastIndex ? 0 : currentIndex + 1]
 
   return (
     <div className={styles.container}>
-      <div className={styles.sideSlide}>
-        <CarouselItem program={programs[prevIndex]!} isActive={false} />
-      </div>
+      {prevProgram !== undefined && (
+        <div className={styles.sideSlide}>
+          <CarouselItem program={prevProgram} isActive={false} />
+        </div>
+      )}
 
       <button
         type="button"
@@ -49,9 +54,11 @@ export const Carousel: FC<CarouselProps> = ({ programs }) => {
         </span>
       </button>
 
-      <div className={styles.centerSlide}>
-        <CarouselItem program={programs[currentIndex]!} isActive={true} />
-      </div>
+      {currentProgram !== undefined && (
+        <div className={styles.centerSlide}>
+          <CarouselItem program={currentProgram} isActive={true} />
+        </div>
+      )}
 
       <button
         type="button"
@@ -69,9 +76,11 @@ export const Carousel: FC<CarouselProps> = ({ programs }) => {
         </span>
       </button>
 
-      <div className={styles.sideSlide}>
-        <CarouselItem program={programs[nextIndex]!} isActive={false} />
-      </div>
+      {nextProgram !== undefined && (
+        <div className={styles.sideSlide}>
+          <CarouselItem program={nextProgram} isActive={false} />
+        </div>
+      )}
     </div>
   )
 }
