@@ -1,14 +1,14 @@
+import type { FC } from 'react'
+
 import type { Program } from './carousel-item/carousel-item'
 import { Carousel } from './carousel/carousel'
 
-type Props = {
+type ProgramCarouselProps = {
   programs: Program[]
 }
 
-export const ProgramCarousel = ({ programs }: Props) => {
-  return (
-    <section>
-      <Carousel programs={programs} />
-    </section>
-  )
-}
+export const ProgramCarousel: FC<ProgramCarouselProps> = ({ programs }) => (
+  <section>
+    <Carousel programs={programs} />
+  </section>
+)

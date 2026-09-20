@@ -1,16 +1,16 @@
 // src/routes/_components/program-carousel/carousel/carousel.tsx
-import { useState } from 'react'
+import { type FC, useState } from 'react'
 
 import { IconCaretLeft, IconCaretRight } from '../../../../components/icons'
 import { CarouselItem, type Program } from '../carousel-item/carousel-item'
 
 import styles from './carousel.module.css'
 
-type Props = {
+type CarouselProps = {
   programs: Program[]
 }
 
-export const Carousel = ({ programs }: Props) => {
+export const Carousel: FC<CarouselProps> = ({ programs }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   if (!programs || programs.length === 0) {
