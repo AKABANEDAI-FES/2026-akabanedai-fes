@@ -2,6 +2,7 @@
 import { type FC, useState } from 'react'
 
 import { IconCaretLeft, IconCaretRight } from '../../../../components/icons'
+import { cn } from '../../../../utils/cn'
 import { CarouselItem, type Program } from '../carousel-item/carousel-item'
 
 import styles from './carousel.module.css'
@@ -31,7 +32,7 @@ export const Carousel: FC<CarouselProps> = ({ programs }) => {
   return (
     <div className={styles.container}>
       {/* 左スライド */}
-      <div className={`${styles.slide} ${styles.sideSlide}`}>
+      <div className={cn(styles.slide, styles.sideSlide)}>
         <CarouselItem program={programs[prevIndex]!} isActive={false} />
       </div>
 
@@ -39,12 +40,12 @@ export const Carousel: FC<CarouselProps> = ({ programs }) => {
       <button
         type="button"
         onClick={handlePrev}
-        className={`${styles.navButton} ${styles.prevButton}`}
+        className={cn(styles.navButton, styles.prevButton)}
         aria-label="前の企画へ"
       >
         <span className={styles.iconWrapper}>
           {/* 水色の下敷き影 */}
-          <span className={`${styles.arrowShadow} ${styles.arrowShadowLeft}`}>
+          <span className={cn(styles.arrowShadow, styles.arrowShadowLeft)}>
             <IconCaretLeft />
           </span>
           {/* メインのオレンジ矢印 */}
@@ -55,7 +56,7 @@ export const Carousel: FC<CarouselProps> = ({ programs }) => {
       </button>
 
       {/* 中央スライド */}
-      <div className={`${styles.slide} ${styles.centerSlide}`}>
+      <div className={cn(styles.slide, styles.centerSlide)}>
         <CarouselItem program={programs[currentIndex]!} isActive={true} />
       </div>
 
@@ -63,12 +64,12 @@ export const Carousel: FC<CarouselProps> = ({ programs }) => {
       <button
         type="button"
         onClick={handleNext}
-        className={`${styles.navButton} ${styles.nextButton}`}
+        className={cn(styles.navButton, styles.nextButton)}
         aria-label="次の企画へ"
       >
         <span className={styles.iconWrapper}>
           {/* 水色の下敷き影 */}
-          <span className={`${styles.arrowShadow} ${styles.arrowShadowRight}`}>
+          <span className={cn(styles.arrowShadow, styles.arrowShadowRight)}>
             <IconCaretRight />
           </span>
           {/* メインのオレンジ矢印 */}
@@ -79,7 +80,7 @@ export const Carousel: FC<CarouselProps> = ({ programs }) => {
       </button>
 
       {/* 右スライド */}
-      <div className={`${styles.slide} ${styles.sideSlide}`}>
+      <div className={cn(styles.slide, styles.sideSlide)}>
         <CarouselItem program={programs[nextIndex]!} isActive={false} />
       </div>
     </div>

@@ -4,6 +4,7 @@ import type { FC } from 'react'
 
 import type { GetProjectsResponse } from '../../../../api/akabase'
 import { IconChevronRight } from '../../../../components/icons'
+import { cn } from '../../../../utils/cn'
 
 import styles from './carousel-item.module.css'
 
@@ -20,7 +21,7 @@ export const CarouselItem: FC<CarouselItemProps> = ({ program, isActive = false 
   <Link
     to="/programs/$id"
     params={{ id: program.id }}
-    className={`${styles.card} ${isActive ? styles.active : ''}`}
+    className={cn(styles.card, isActive && styles.active)}
   >
     <div className={styles.inner}>
       {/* 画像エリア（上部左右が斜めにカットされる形状） */}
