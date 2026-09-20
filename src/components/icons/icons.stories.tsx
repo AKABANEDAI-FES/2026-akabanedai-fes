@@ -2,6 +2,8 @@ import type { Meta, StoryObj } from '@storybook/tanstack-react'
 import type { FC } from 'react'
 
 import {
+  IconBrandInstagram,
+  IconBrandX,
   IconCaretLeft,
   IconCaretRight,
   IconChevronRight,
@@ -14,6 +16,8 @@ import {
 import styles from './icons.stories.module.css'
 
 const icons = {
+  'brand-instagram': IconBrandInstagram,
+  'brand-x': IconBrandX,
   'caret-left': IconCaretLeft,
   'caret-right': IconCaretRight,
   'chevron-right': IconChevronRight,
