@@ -12,10 +12,6 @@ type CarouselProps = {
 export const Carousel: FC<CarouselProps> = ({ programs }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
-  if (programs.length === 0) {
-    return null
-  }
-
   const lastIndex = programs.length - 1
 
   const handlePrev = () => {
