@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/tanstack-react'
 
-import { IconItemSearch } from '../icons'
+import { IconMap } from '../icons'
 import { LinkButton } from './link-button'
 
 import styles from './link-button.stories.module.css'
@@ -18,19 +18,41 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     to: '/',
-    className: styles.link,
+    children: 'GoogleMap',
+  },
+}
+
+export const WithIcon: Story = {
+  args: {
+    to: '/',
     children: (
       <>
-        <IconItemSearch className={styles.icon} aria-hidden="true" focusable="false" />
-        企画一覧
+        <IconMap className={styles.icon} aria-hidden="true" focusable="false" />
+        GoogleMap
       </>
     ),
   },
 }
 
-export const WithoutIcon: Story = {
+export const Card: Story = {
   args: {
     to: '/',
-    children: 'もっと見る',
+    variant: 'card',
+    className: styles.card,
+    children: 'パンフレット',
+  },
+}
+
+export const CardWithIcon: Story = {
+  args: {
+    to: '/',
+    variant: 'card',
+    className: styles.cardWithIcon,
+    children: (
+      <>
+        <IconMap className={styles.cardIcon} aria-hidden="true" focusable="false" />
+        パンフレット
+      </>
+    ),
   },
 }
