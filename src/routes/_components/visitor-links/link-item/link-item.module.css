@@ -43,7 +43,7 @@
   transition-delay: 0.12s;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .link {
     gap: 1rem;
   }
