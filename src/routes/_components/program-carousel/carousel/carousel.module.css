@@ -70,12 +70,12 @@
   display: inline-block;
   width: 100px;
   height: 100px;
-}
 
-.iconWrapper svg {
-  width: 100px;
-  height: 100px;
-  fill: currentcolor;
+  & svg {
+    width: 100px;
+    height: 100px;
+    fill: currentcolor;
+  }
 }
 
 /* 背面の水色シャドウ三角（動かさずに固定） */
@@ -109,14 +109,13 @@
   line-height: 1;
   color: var(--color-accent);
   transition: transform 0.1s ease;
-}
 
-/* 左矢印ボタン押下時: オレンジ三角が水色の影（左下）に向かって沈み込む */
-.prevButton:active .arrowMain {
-  transform: translate(-5px, 5px);
-}
+  /* ボタン押下時: オレンジ三角が水色の影に向かって沈み込む */
+  .prevButton:active & {
+    transform: translate(-5px, 5px);
+  }
 
-/* 右矢印ボタン押下時: オレンジ三角が水色の影（右下）に向かって沈み込む */
-.nextButton:active .arrowMain {
-  transform: translate(5px, 5px);
+  .nextButton:active & {
+    transform: translate(5px, 5px);
+  }
 }

@@ -12,12 +12,12 @@
   transition:
     transform 0.2s ease,
     background-color 0.2s ease;
-}
 
-/* 中央（アクティブ時）: 黄色背景 */
-.card.active {
-  z-index: 2;
-  background-color: var(--color-secondary);
+  /* 中央（アクティブ時）: 黄色背景 */
+  &.active {
+    z-index: 2;
+    background-color: var(--color-secondary);
+  }
 }
 
 .inner {
@@ -65,14 +65,15 @@
     color-mix(in oklab, var(--color-surface) 85%, transparent) 100%
   );
   backdrop-filter: blur(2px);
-}
 
-.card.active .footer {
-  background: linear-gradient(
-    to bottom,
-    color-mix(in oklab, var(--color-secondary) 70%, transparent) 0%,
-    color-mix(in oklab, var(--color-secondary) 85%, transparent) 100%
-  );
+  /* 中央（アクティブ時）は黄色の帯にする */
+  .card.active & {
+    background: linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--color-secondary) 70%, transparent) 0%,
+      color-mix(in oklab, var(--color-secondary) 85%, transparent) 100%
+    );
+  }
 }
 
 /* 左端のオレンジの縦バー */
@@ -100,13 +101,13 @@
   display: flex;
   flex-shrink: 0;
   color: var(--color-accent);
-}
 
-.arrow svg {
-  width: 7rem;
-  height: 7rem;
-  margin-right: -3rem;
-  stroke-width: 2px;
-  stroke-linecap: butt;
-  stroke-linejoin: miter;
+  & svg {
+    width: 7rem;
+    height: 7rem;
+    margin-right: -3rem;
+    stroke-width: 2px;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+  }
 }
