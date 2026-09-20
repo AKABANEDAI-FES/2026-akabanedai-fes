@@ -18,6 +18,7 @@
 
 /* 中央スライド（横幅を437pxで完全固定） */
 .centerSlide {
+  composes: slide;
   z-index: 2;
   flex: 0 0 437px;
   width: 437px;
@@ -27,6 +28,7 @@
 
 /* 左右のスライド（横幅を402pxで完全固定） */
 .sideSlide {
+  composes: slide;
   z-index: 1;
   flex: 0 0 420px;
   width: 420px;
@@ -51,11 +53,14 @@
 
 /* 中央カードを基準にした左右の配置位置（間隔に合わせて調整） */
 .prevButton {
+  composes: navButton;
+
   /* 中央(50%)から中央カード幅の半分(160px) + カード間の隙間の中央付近へ */
   left: calc(50% - 160px - 120px);
 }
 
 .nextButton {
+  composes: navButton;
   right: calc(50% - 160px - 120px);
 }
 
@@ -67,6 +72,12 @@
   height: 100px;
 }
 
+.iconWrapper svg {
+  width: 100px;
+  height: 100px;
+  fill: currentcolor;
+}
+
 /* 背面の水色シャドウ三角（動かさずに固定） */
 .arrowShadow {
   position: absolute;
@@ -76,19 +87,15 @@
   color: var(--color-primary);
 }
 
-.arrowShadow svg {
-  width: 100px;
-  height: 100px;
-  fill: currentcolor;
-}
-
 /* 水色シャドウの位置オフセット */
 .arrowShadowRight {
+  composes: arrowShadow;
   top: 9px;
   left: 6px;
 }
 
 .arrowShadowLeft {
+  composes: arrowShadow;
   top: 6px;
   left: -6px;
 }
@@ -102,12 +109,6 @@
   line-height: 1;
   color: var(--color-accent);
   transition: transform 0.1s ease;
-}
-
-.arrowMain svg {
-  width: 100px;
-  height: 100px;
-  fill: currentcolor;
 }
 
 /* 左矢印ボタン押下時: オレンジ三角が水色の影（左下）に向かって沈み込む */
