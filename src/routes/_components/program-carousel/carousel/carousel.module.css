@@ -11,9 +11,7 @@
 }
 
 .slide {
-  box-sizing: border-box;
   display: flex;
-  flex-shrink: 0;
 }
 
 /* 中央スライド（横幅を437pxで完全固定） */
@@ -21,8 +19,6 @@
   composes: slide;
   z-index: 2;
   flex: 0 0 437px;
-  width: 437px;
-  min-width: 437px;
   height: 335px;
 }
 
@@ -31,8 +27,6 @@
   composes: slide;
   z-index: 1;
   flex: 0 0 420px;
-  width: 420px;
-  min-width: 420px;
   height: 308px;
   opacity: 0.9;
 }
@@ -67,14 +61,12 @@
 /* 矢印サイズ（全体の拡大縮小アニメーションは削除して固定） */
 .iconWrapper {
   position: relative;
-  display: inline-block;
   width: 100px;
   height: 100px;
 
   & svg {
     width: 100px;
     height: 100px;
-    fill: currentcolor;
   }
 }
 
@@ -82,8 +74,6 @@
 .arrowShadow {
   position: absolute;
   z-index: 1;
-  font-size: 100px;
-  line-height: 1;
   color: var(--color-primary);
 }
 
@@ -106,7 +96,6 @@
   top: 0;
   left: 0;
   z-index: 2;
-  line-height: 1;
   color: var(--color-accent);
   transition: transform 0.1s ease;
 
