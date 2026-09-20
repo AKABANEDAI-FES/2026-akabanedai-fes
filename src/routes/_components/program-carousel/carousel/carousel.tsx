@@ -26,14 +26,22 @@ export const Carousel: FC<CarouselProps> = ({ programs }) => {
     setCurrentIndex((prev) => (prev === lastIndex ? 0 : prev + 1))
   }
 
-  const prevProgram = programs[currentIndex === 0 ? lastIndex : currentIndex - 1]
+  const prevIndex = currentIndex === 0 ? lastIndex : currentIndex - 1
+  const nextIndex = currentIndex === lastIndex ? 0 : currentIndex + 1
+
+  const prevProgram = programs[prevIndex]
   const currentProgram = programs[currentIndex]
-  const nextProgram = programs[currentIndex === lastIndex ? 0 : currentIndex + 1]
+  const nextProgram = programs[nextIndex]
 
   return (
     <div className={styles.container}>
       {prevProgram !== undefined && (
-        <div className={styles.sideSlide}>
+        <div
+          className={styles.sideSlide}
+          role="group"
+          aria-roledescription="スライド"
+          aria-label={`${prevIndex + 1} / ${programs.length}`}
+        >
           <CarouselItem program={prevProgram} isActive={false} />
         </div>
       )}
@@ -55,7 +63,13 @@ export const Carousel: FC<CarouselProps> = ({ programs }) => {
       </button>
 
       {currentProgram !== undefined && (
-        <div className={styles.centerSlide}>
+        <div
+          className={styles.centerSlide}
+          role="group"
+          aria-roledescription="スライド"
+          aria-label={`${currentIndex + 1} / ${programs.length}`}
+          aria-live="polite"
+        >
           <CarouselItem program={currentProgram} isActive={true} />
         </div>
       )}
@@ -77,7 +91,12 @@ export const Carousel: FC<CarouselProps> = ({ programs }) => {
       </button>
 
       {nextProgram !== undefined && (
-        <div className={styles.sideSlide}>
+        <div
+          className={styles.sideSlide}
+          role="group"
+          aria-roledescription="スライド"
+          aria-label={`${nextIndex + 1} / ${programs.length}`}
+        >
           <CarouselItem program={nextProgram} isActive={false} />
         </div>
       )}

@@ -8,7 +8,7 @@ type ProgramCarouselProps = {
 }
 
 export const ProgramCarousel: FC<ProgramCarouselProps> = ({ programs }) => (
-  <section aria-label="企画紹介">
+  <section aria-roledescription="カルーセル" aria-label="企画紹介">
     <Carousel programs={programs} />
   </section>
 )
