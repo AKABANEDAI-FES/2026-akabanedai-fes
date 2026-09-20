@@ -1,0 +1,48 @@
+@import url('../../../styles/media.css');
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(4, min(250px, 20svw));
+  gap: min(72px, 5svw);
+  justify-content: center;
+  padding-block-end: 8px;
+  padding-inline: min(24px, 2svw);
+
+  @media (--mobile) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6svw;
+    padding-inline: 12svw;
+  }
+}
+
+.link {
+  flex-direction: column;
+  gap: min(24px, 2svw);
+  padding: min(16px, 1svw);
+  font-size: min(28px, 2svw);
+
+  @media (--mobile) {
+    gap: 8px;
+    padding: 12px;
+    font-size: var(--font-size-md);
+  }
+}
+
+.label {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.icon {
+  flex: 0 0 auto;
+  width: min(120px, 10svw);
+  height: min(120px, 10svw);
+  color: var(--color-primary);
+
+  @media (--mobile) {
+    width: 50%;
+    height: 50%;
+  }
+}

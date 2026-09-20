@@ -1,0 +1,47 @@
+.link {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 6px 16px;
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-foreground);
+  text-decoration: none;
+  background-color: var(--color-secondary);
+  border: 1px solid var(--color-border);
+  transform: translate(0, 0);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+
+  &:focus-visible {
+    outline: 3px solid var(--color-foreground);
+    outline-offset: 3px;
+  }
+}
+
+.button {
+  composes: link;
+  border-radius: 8px;
+  box-shadow: 4px 4px var(--color-primary);
+
+  &:hover {
+    box-shadow: 2px 2px var(--color-primary);
+    transform: translate(2px, 2px);
+  }
+}
+
+.card {
+  composes: link;
+  aspect-ratio: 1;
+  border-radius: 16%;
+  box-shadow: 8px 8px var(--color-primary);
+
+  &:hover {
+    box-shadow: 4px 4px var(--color-primary);
+    transform: translate(4px, 4px);
+  }
+}

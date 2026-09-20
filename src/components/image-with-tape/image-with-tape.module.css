@@ -1,0 +1,41 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+}
+
+.tape {
+  position: absolute;
+  height: 16%;
+  pointer-events: none;
+}
+
+.topLeftTape {
+  composes: tape;
+  top: -5%;
+  left: -15%;
+  z-index: 1;
+  width: 34.5%;
+  transform: rotate(-38deg);
+}
+
+.bottomRightBackTape {
+  composes: tape;
+  right: -13%;
+  bottom: -1%;
+  z-index: 1;
+  width: 37.5%;
+  transform: rotate(-28deg);
+}
+
+.bottomRightFrontTape {
+  composes: tape;
+  right: -13%;
+  bottom: 3%;
+  z-index: 2;
+  width: 37.5%;
+  transform: translateX(2%) rotate(-47deg);
+}
