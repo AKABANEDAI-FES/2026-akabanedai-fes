@@ -1,0 +1,98 @@
+.card {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  text-decoration: none;
+  border: 1.5px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px color-mix(in oklab, var(--color-foreground) 8%, transparent);
+  transition: background-color 0.2s ease;
+
+  &.active {
+    z-index: 2;
+    background-color: var(--color-secondary);
+  }
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.imageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(18% 0%, 82% 0%, 100% 18%, 100% 100%, 0% 100%, 0% 18%);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  height: 48px;
+  background: linear-gradient(
+    to bottom,
+    color-mix(in oklab, var(--color-surface) 70%, transparent) 0%,
+    color-mix(in oklab, var(--color-surface) 85%, transparent) 100%
+  );
+  backdrop-filter: blur(2px);
+
+  .card.active & {
+    background: linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--color-secondary) 70%, transparent) 0%,
+      color-mix(in oklab, var(--color-secondary) 85%, transparent) 100%
+    );
+  }
+}
+
+.indicatorBar {
+  flex-shrink: 0;
+  width: 6px;
+  height: 48px;
+  background-color: var(--color-accent);
+  border-radius: 0 2px 2px 0;
+}
+
+.title {
+  flex: 1;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 32px;
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+
+.arrow {
+  display: flex;
+  flex-shrink: 0;
+  color: var(--color-accent);
+
+  & svg {
+    width: 7rem;
+    height: 7rem;
+    margin-right: -3rem;
+    stroke-width: 2px;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+  }
+}
