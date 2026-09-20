@@ -13,6 +13,11 @@ const TARGET_PROGRAM_NAMES = [
   'ARスタンプラリー',
 ] as const
 
+import { CampusMap } from './_components/campus-map/campus-map'
+import { PageLinks } from './_components/page-links/page-links'
+
+import styles from './index.module.css'
+
 export const Route = createFileRoute('/')({
   loader: () => fetchTopPageData(),
   component: () => <IndexPage />,
@@ -44,9 +49,11 @@ const IndexPage = () => {
   const { programs } = Route.useLoaderData()
 
   return (
-    <main style={{ minHeight: '100vh', backgroundColor: '#fffdfa', padding: '40px 0' }}>
-      {/* 企画カルーセルの表示 */}
+    <main className={styles.main}>
+      <h1>2026 赤羽台祭</h1>
       <ProgramCarousel programs={programs} />
+      <PageLinks />
+      <CampusMap />
     </main>
   )
 }
