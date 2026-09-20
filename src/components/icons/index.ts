@@ -1,3 +1,5 @@
+export { default as IconBrandInstagram } from './assets/brand-instagram.svg?react'
+export { default as IconBrandX } from './assets/brand-x.svg?react'
 export { default as IconCaretLeft } from './assets/caret-left.svg?react'
 export { default as IconCaretRight } from './assets/caret-right.svg?react'
 export { default as IconChevronRight } from './assets/chevron-right.svg?react'
