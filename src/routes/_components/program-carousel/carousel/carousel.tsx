@@ -36,7 +36,7 @@ export const Carousel: FC<CarouselProps> = ({ programs }) => {
           className={styles.sideSlide}
           role="group"
           aria-roledescription="スライド"
-          aria-label={`${prevIndex + 1} / ${programs.length}`}
+          aria-label={`${programs.length}件中${prevIndex + 1}件目`}
         >
           <CarouselItem program={prevProgram} isActive={false} />
         </div>
@@ -63,7 +63,7 @@ export const Carousel: FC<CarouselProps> = ({ programs }) => {
           className={styles.centerSlide}
           role="group"
           aria-roledescription="スライド"
-          aria-label={`${currentIndex + 1} / ${programs.length}`}
+          aria-label={`${programs.length} 件中 ${currentIndex + 1} 件目`}
           aria-live="polite"
         >
           <CarouselItem program={currentProgram} isActive={true} />
@@ -91,7 +91,7 @@ export const Carousel: FC<CarouselProps> = ({ programs }) => {
           className={styles.sideSlide}
           role="group"
           aria-roledescription="スライド"
-          aria-label={`${nextIndex + 1} / ${programs.length}`}
+          aria-label={`${programs.length}件中${nextIndex + 1}件目`}
         >
           <CarouselItem program={nextProgram} isActive={false} />
         </div>
