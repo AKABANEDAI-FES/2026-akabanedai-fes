@@ -2,13 +2,15 @@ import type { Meta, StoryObj } from '@storybook/tanstack-react'
 
 import { ProgramCarousel } from './program-carousel'
 
-const meta: Meta<typeof ProgramCarousel> = {
-  title: 'Routes/Components/ProgramCarousel',
+const meta = {
+  title: 'Pages/Top/ProgramCarousel',
   component: ProgramCarousel,
-}
+  tags: ['autodocs'],
+} satisfies Meta<typeof ProgramCarousel>
 
 export default meta
-type Story = StoryObj<typeof ProgramCarousel>
+
+type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
