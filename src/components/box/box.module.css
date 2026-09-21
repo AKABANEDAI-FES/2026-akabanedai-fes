@@ -20,8 +20,8 @@
     90deg,
     var(--color-secondary) 0,
     var(--color-secondary) 10px,
-    color-mix(in srgb var(--color-secondary) 70% rgb(0 0 0)) 10px,
-    color-mix(in srgb var(--color-secondary) 70% rgb(0 0 0)) 20px
+    color-mix(in srgb var(--color-secondary) 70% color: #000000;) 10px,
+    color-mix(in srgb var(--color-secondary) 70% color: #000000;) 20px
   );
 }
 

@@ -54,7 +54,7 @@
 }
 
 /* レスポンシブ対応 */
-@media (width <= 768px) {
+@media (--breakpoint-md) {
   .container {
     padding: 1.5rem;
   }
