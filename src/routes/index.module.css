@@ -1,6 +1,6 @@
 .main {
   display: flex;
   flex-direction: column;
-  row-gap: 160px;
+  row-gap: min(160px, 12svw);
   align-items: center;
 }
