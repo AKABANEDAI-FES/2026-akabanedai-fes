@@ -1,5 +1,6 @@
 import { type FC, useId } from 'react'
 
+import { LinkButton } from '../../../components/link-button/link-button'
 import logo from './logo.png'
 
 import styles from './theme-section.module.css'
@@ -34,6 +35,9 @@ export const ThemeSection: FC = () => {
               <span className={styles.chevron} />
             </span>
           </p>
+          <LinkButton to="/" className={styles.aboutLink}>
+            今年のテーマ・ロゴについて
+          </LinkButton>
         </div>
       </div>
     </section>
