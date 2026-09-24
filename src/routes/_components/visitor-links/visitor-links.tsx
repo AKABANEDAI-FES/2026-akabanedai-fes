@@ -15,13 +15,13 @@ export const VisitorLinks = () => {
       <WaveRightMobile className={styles.waveRightMobile} aria-hidden="true" focusable="false" />
       <ul className={styles.list}>
         <li className={styles.listItem}>
-          <LinkItem href="/" text="ご来場の皆様へ" />
+          <LinkItem to="/" text="ご来場の皆様へ" />
         </li>
         <li className={styles.listItem}>
-          <LinkItem href="/" text="ご来場の際の注意点" />
+          <LinkItem to="/" text="ご来場の際の注意点" />
         </li>
         <li className={styles.listItem}>
-          <LinkItem href="/" text="よくあるご質問" />
+          <LinkItem to="/" text="よくあるご質問" />
         </li>
       </ul>
     </section>
