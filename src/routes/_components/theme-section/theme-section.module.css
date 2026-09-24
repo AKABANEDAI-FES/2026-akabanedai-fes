@@ -20,11 +20,8 @@
 .body {
   --shadow-offset: 0.625rem;
 
-  margin-inline: 9.375rem var(--shadow-offset);
-
-  @media (--mobile) {
-    margin-left: 0;
-  }
+  width: min(100% - var(--shadow-offset), 40rem);
+  margin-inline: auto;
 }
 
 .card {
