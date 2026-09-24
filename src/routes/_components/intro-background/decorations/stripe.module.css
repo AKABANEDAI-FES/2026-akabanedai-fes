@@ -1,7 +1,28 @@
 .stripe {
-  --stripe-from: var(--color-secondary);
-  --stripe-to: var(--color-primary);
-
   background-image: linear-gradient(to right, var(--stripe-from), var(--stripe-to));
   border-radius: 9999px;
+}
+
+.fromPrimary {
+  --stripe-from: var(--color-primary);
+}
+
+.fromSecondary {
+  --stripe-from: var(--color-secondary);
+}
+
+.fromAccent {
+  --stripe-from: var(--color-accent);
+}
+
+.toPrimary {
+  --stripe-to: var(--color-primary);
+}
+
+.toSecondary {
+  --stripe-to: var(--color-secondary);
+}
+
+.toAccent {
+  --stripe-to: var(--color-accent);
 }

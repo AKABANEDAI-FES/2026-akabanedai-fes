@@ -1,8 +1,22 @@
-import type { CSSProperties, FC } from 'react'
+import type { FC } from 'react'
+
+import { cn } from '../../../../utils/cn'
 
 import styles from './stripe.module.css'
 
 export type StripeColor = 'primary' | 'secondary' | 'accent'
+
+const fromStyles = {
+  primary: styles.fromPrimary,
+  secondary: styles.fromSecondary,
+  accent: styles.fromAccent,
+} as const satisfies Record<StripeColor, string>
+
+const toStyles = {
+  primary: styles.toPrimary,
+  secondary: styles.toSecondary,
+  accent: styles.toAccent,
+} as const satisfies Record<StripeColor, string>
 
 type StripeProps = {
   length: string
@@ -13,14 +27,7 @@ type StripeProps = {
 
 export const Stripe: FC<StripeProps> = ({ length, thickness, from, to }) => (
   <div
-    className={styles.stripe}
-    style={
-      {
-        width: length,
-        height: thickness,
-        '--stripe-from': `var(--color-${from})`,
-        '--stripe-to': `var(--color-${to})`,
-      } as CSSProperties
-    }
+    className={cn(styles.stripe, fromStyles[from], toStyles[to])}
+    style={{ width: length, height: thickness }}
   />
 )
