@@ -23,12 +23,8 @@ export const ThemeSection: FC = () => {
             <img src={logo} alt="" width={1061} height={353} className={styles.logo} />
           </div>
           <p className={styles.tagline}>
-            <span className={styles.segment}>
-              加速<span className={styles.kana}>する</span>未来、
-            </span>
-            <span className={styles.segment}>
-              <span className={styles.kana}>ここが</span>最前線
-            </span>
+            加速<span className={styles.kana}>する</span>未来、
+            <span className={styles.kana}>ここが</span>最前線
             <span className={styles.chevrons} aria-hidden="true">
               <span className={styles.chevron} />
               <span className={styles.chevron} />
