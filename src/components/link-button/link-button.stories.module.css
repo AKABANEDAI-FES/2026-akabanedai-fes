@@ -1,0 +1,25 @@
+.card {
+  width: 250px;
+}
+
+.cardWithIcon {
+  composes: card;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px;
+  font-size: 28px;
+}
+
+.cardIcon {
+  flex: 0 0 auto;
+  width: 120px;
+  height: 120px;
+  color: var(--color-primary);
+}
+
+.icon {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  color: var(--color-primary);
+}

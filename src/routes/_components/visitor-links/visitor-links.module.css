@@ -1,0 +1,96 @@
+@import url('../../../styles/media.css');
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 90svh;
+  overflow: hidden;
+  background-color: var(--color-primary);
+
+  @media (--mobile) {
+    min-height: 75svh;
+  }
+}
+
+.waveLeft,
+.waveLeftMobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  color: var(--color-secondary);
+  pointer-events: none;
+}
+
+.waveRight,
+.waveRightMobile {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  color: var(--color-secondary);
+  pointer-events: none;
+}
+
+.waveLeft {
+  width: 40%;
+
+  @media (--mobile) {
+    display: none;
+  }
+}
+
+.waveRight {
+  width: 36%;
+
+  @media (--mobile) {
+    display: none;
+  }
+}
+
+.waveLeftMobile {
+  display: none;
+
+  @media (--mobile) {
+    display: block;
+    width: min(78%, 320px);
+  }
+}
+
+.waveRightMobile {
+  display: none;
+
+  @media (--mobile) {
+    display: block;
+    width: min(73%, 300px);
+  }
+}
+
+.list {
+  position: relative;
+  z-index: 1;
+  width: 60%;
+  padding: 0;
+  list-style: none;
+
+  @media (--mobile) {
+    width: 80%;
+  }
+}
+
+.listItem {
+  position: relative;
+}
+
+.listItem:not(:last-child)::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  content: '';
+  background: linear-gradient(to right, var(--color-secondary), var(--color-accent));
+}
