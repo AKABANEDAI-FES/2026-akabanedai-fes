@@ -4,12 +4,8 @@
   position: relative;
   display: flex;
   min-height: 100svh;
-  padding: 4rem;
+  padding: clamp(1.5rem, 5svw, 4rem);
   overflow: hidden;
-
-  @media (--mobile) {
-    padding: 1.5rem;
-  }
 }
 
 .inner {

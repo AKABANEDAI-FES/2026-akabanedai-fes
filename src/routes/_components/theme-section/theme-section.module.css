@@ -1,11 +1,7 @@
 @import url('../../../styles/media.css');
 
 .themeSection {
-  padding: 4rem;
-
-  @media (--mobile) {
-    padding: 1.5rem;
-  }
+  padding: clamp(1.5rem, 5svw, 4rem);
 }
 
 .inner {
