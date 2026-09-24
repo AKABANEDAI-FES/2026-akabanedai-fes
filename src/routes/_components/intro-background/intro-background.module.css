@@ -1,0 +1,81 @@
+@import url('../../../styles/media.css');
+
+@keyframes parallax {
+  to {
+    translate: calc(cos(var(--angle)) * var(--speed) * 100svh)
+      calc(sin(var(--angle)) * var(--speed) * 100svh);
+  }
+}
+
+.introBackground {
+  position: relative;
+  width: 100%;
+  overflow: clip;
+  isolation: isolate;
+  view-timeline-name: --intro-background;
+}
+
+.decorations {
+  --angle: -48deg;
+
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  container-type: inline-size;
+  pointer-events: none;
+}
+
+.desktopDecorations {
+  composes: decorations;
+
+  @media (--mobile) {
+    display: none;
+  }
+}
+
+.mobileDecorations {
+  composes: decorations;
+  display: none;
+
+  @media (--mobile) {
+    display: block;
+  }
+}
+
+.layer {
+  position: absolute;
+  inset: 0;
+
+  & > * {
+    position: absolute;
+    rotate: var(--angle);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: scroll()) {
+      animation-name: parallax;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: --intro-background;
+      animation-range: exit-crossing;
+    }
+  }
+}
+
+.layerBack {
+  composes: layer;
+
+  --speed: 0.3;
+}
+
+.layerMiddle {
+  composes: layer;
+
+  --speed: 0.6;
+}
+
+.layerFront {
+  composes: layer;
+
+  --speed: 0.9;
+}

@@ -3,8 +3,11 @@ import { createServerFn } from '@tanstack/react-start'
 
 import * as akabaseClient from '../api/akabase'
 import { CampusMap } from './_components/campus-map/campus-map'
+import { FirstView } from './_components/first-view/first-view'
+import { IntroBackground } from './_components/intro-background/intro-background'
 import { PageLinks } from './_components/page-links/page-links'
 import { ProgramCarousel } from './_components/program-carousel/program-carousel'
+import { ThemeSection } from './_components/theme-section/theme-section'
 import { VisitorLinks } from './_components/visitor-links/visitor-links'
 
 import styles from './index.module.css'
@@ -37,7 +40,10 @@ const IndexPage = () => {
 
   return (
     <main className={styles.main}>
-      <h1>2026 赤羽台祭</h1>
+      <IntroBackground>
+        <FirstView />
+        <ThemeSection />
+      </IntroBackground>
       <ProgramCarousel programs={programs} />
       <PageLinks />
       <CampusMap />

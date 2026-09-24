@@ -1,0 +1,53 @@
+@import url('../../../styles/media.css');
+
+.firstView {
+  display: flex;
+  min-height: 100svh;
+  padding: clamp(1.5rem, 5svw, 4rem);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.title {
+  margin: 0;
+}
+
+.edition {
+  display: block;
+  margin: 0 0 1.5rem;
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  line-height: 1.2;
+
+  @media (--mobile) {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.logo {
+  width: 44rem;
+}
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 7rem 0 0;
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: right;
+
+  @media (--mobile) {
+    margin-top: 3rem;
+  }
+}
+
+.segment {
+  display: inline-block;
+}

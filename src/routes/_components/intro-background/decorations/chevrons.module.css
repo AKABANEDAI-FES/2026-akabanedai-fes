@@ -1,0 +1,57 @@
+.chevrons {
+  --stroke: 0.25rem;
+  --inset: calc(var(--stroke) * sqrt(2));
+
+  position: relative;
+  aspect-ratio: 8 / 5;
+}
+
+.chevron {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 37.5%;
+  height: 100%;
+  background-color: var(--color-accent);
+
+  &:nth-child(2) {
+    left: 31.25%;
+  }
+
+  &:nth-child(3) {
+    left: 62.5%;
+  }
+}
+
+.filled {
+  composes: chevron;
+  clip-path: polygon(
+    calc(100% / 6) 0%,
+    100% 50%,
+    calc(100% / 6) 100%,
+    0% 90%,
+    calc(200% / 3) 50%,
+    0% 10%
+  );
+}
+
+.outline {
+  composes: chevron;
+  clip-path: polygon(
+    evenodd,
+    calc(100% / 6) 0%,
+    100% 50%,
+    calc(100% / 6) 100%,
+    0% 90%,
+    calc(200% / 3) 50%,
+    0% 10%,
+    calc(100% / 6) 0%,
+    calc(100% / 6) var(--inset),
+    calc(100% - var(--inset)) 50%,
+    calc(100% / 6) calc(100% - var(--inset)),
+    var(--inset) 90%,
+    calc(200% / 3 + var(--inset)) 50%,
+    var(--inset) 10%,
+    calc(100% / 6) var(--inset)
+  );
+}

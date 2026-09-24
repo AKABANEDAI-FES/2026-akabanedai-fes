@@ -1,0 +1,35 @@
+import type { Meta, StoryObj } from '@storybook/tanstack-react'
+
+import { FirstView } from '../first-view/first-view'
+import { ThemeSection } from '../theme-section/theme-section'
+import { IntroBackground } from './intro-background'
+
+const meta = {
+  title: 'Pages/Top/IntroBackground',
+  component: IntroBackground,
+  tags: ['autodocs'],
+  parameters: {
+    layout: 'fullscreen',
+  },
+  args: {
+    children: <div style={{ height: '125vw' }} />,
+  },
+} satisfies Meta<typeof IntroBackground>
+
+export default meta
+
+type Story = StoryObj<typeof meta>
+
+export const Default: Story = {}
+
+export const WithContents: Story = {
+  args: {
+    children: (
+      <>
+        <FirstView />
+        <ThemeSection />
+        <div style={{ height: '100svh' }} />
+      </>
+    ),
+  },
+}
