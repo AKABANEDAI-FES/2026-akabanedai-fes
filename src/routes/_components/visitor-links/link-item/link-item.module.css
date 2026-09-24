@@ -34,17 +34,18 @@
   margin-left: min(-0.25rem, -0.4svw);
 }
 
-.link:is(:hover, :focus-visible) .chevron:nth-child(1) {
+.link:is(:hover, :focus-visible) .chevron {
   scale: 1.25;
-  transition-delay: 0s;
-}
 
-.link:is(:hover, :focus-visible) .chevron:nth-child(2) {
-  scale: 1.25;
-  transition-delay: 0.06s;
-}
+  &:nth-child(1) {
+    transition-delay: 0s;
+  }
 
-.link:is(:hover, :focus-visible) .chevron:nth-child(3) {
-  scale: 1.25;
-  transition-delay: 0.12s;
+  &:nth-child(2) {
+    transition-delay: 0.06s;
+  }
+
+  &:nth-child(3) {
+    transition-delay: 0.12s;
+  }
 }
