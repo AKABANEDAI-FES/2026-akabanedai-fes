@@ -5,6 +5,7 @@ import * as akabaseClient from '../api/akabase'
 import { CampusMap } from './_components/campus-map/campus-map'
 import { PageLinks } from './_components/page-links/page-links'
 import { ProgramCarousel } from './_components/program-carousel/program-carousel'
+import { VisitorLinks } from './_components/visitor-links/visitor-links'
 
 import styles from './index.module.css'
 
@@ -40,6 +41,7 @@ const IndexPage = () => {
       <ProgramCarousel programs={programs} />
       <PageLinks />
       <CampusMap />
+      <VisitorLinks />
     </main>
   )
 }
