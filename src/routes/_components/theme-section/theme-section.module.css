@@ -1,11 +1,9 @@
+@import url('../../../styles/media.css');
+
 .themeSection {
   padding: 4rem;
 
-  @media (width < 1024px) {
-    padding: 3rem;
-  }
-
-  @media (width < 768px) {
+  @media (--mobile) {
     padding: 1.5rem;
   }
 }
@@ -28,7 +26,7 @@
 
   margin-inline: 9.375rem var(--shadow-offset);
 
-  @media (width < 768px) {
+  @media (--mobile) {
     margin-left: 0;
   }
 }
@@ -54,7 +52,7 @@
   text-indent: 0.15em;
   letter-spacing: 0.15em;
 
-  @media (width < 768px) {
+  @media (--mobile) {
     font-size: 2rem; /* 32px */
     text-align: left;
     text-indent: 0;
@@ -62,7 +60,7 @@
 }
 
 .line {
-  @media (width < 768px) {
+  @media (--mobile) {
     display: block;
   }
 }
@@ -86,7 +84,7 @@
   line-height: 1.4;
   letter-spacing: 0.05em;
 
-  @media (width < 768px) {
+  @media (--mobile) {
     font-size: 1.375rem; /* 22px */
   }
 }
@@ -98,7 +96,7 @@
 .kana {
   font-size: 2rem; /* 32px */
 
-  @media (width < 768px) {
+  @media (--mobile) {
     font-size: 1.125rem; /* 18px */
   }
 }
@@ -110,7 +108,7 @@
   flex-shrink: 0;
   align-items: center;
 
-  @media (width < 768px) {
+  @media (--mobile) {
     --chevron-size: 1.25rem;
   }
 }
