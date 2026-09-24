@@ -27,13 +27,12 @@
 .edition {
   display: block;
   margin: 0 0 1.5rem;
-  font-size: 4.875rem;
+  font-size: var(--font-size-4xl);
   font-weight: 700;
   line-height: 1.2;
 
   @media (--mobile) {
     margin-bottom: 0.5rem;
-    font-size: 2.5rem;
   }
 }
 
@@ -47,7 +46,7 @@
   flex-direction: column;
   align-items: flex-end;
   margin: 7rem 0 0;
-  font-size: 4.25rem;
+  font-size: var(--font-size-3xl);
   font-weight: 700;
   line-height: 1.4;
   color: var(--color-foreground);
@@ -55,7 +54,6 @@
 
   @media (--mobile) {
     margin-top: 3rem;
-    font-size: 2rem;
   }
 }
 
