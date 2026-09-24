@@ -9,6 +9,10 @@
   font-size: max(1.5rem, 4svw);
   color: var(--color-foreground);
   text-decoration: none;
+
+  @media (--mobile) {
+    gap: 1rem;
+  }
 }
 
 .iconWrapper {
@@ -43,10 +47,4 @@
 .link:is(:hover, :focus-visible) .chevron:nth-child(3) {
   scale: 1.25;
   transition-delay: 0.12s;
-}
-
-@media (--mobile) {
-  .link {
-    gap: 1rem;
-  }
 }
