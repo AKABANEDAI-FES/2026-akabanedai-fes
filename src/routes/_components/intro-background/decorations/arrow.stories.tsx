@@ -3,8 +3,9 @@ import type { Meta, StoryObj } from '@storybook/tanstack-react'
 import { Arrow } from './arrow'
 
 const meta = {
-  title: 'Routes/IntroBackground/Decorations/Arrow',
+  title: 'Pages/Top/IntroBackground/Decorations/Arrow',
   component: Arrow,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   },

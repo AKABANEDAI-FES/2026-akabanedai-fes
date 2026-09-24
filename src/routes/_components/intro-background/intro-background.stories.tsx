@@ -5,8 +5,9 @@ import { ThemeSection } from '../theme-section/theme-section'
 import { IntroBackground } from './intro-background'
 
 const meta = {
-  title: 'Routes/IntroBackground',
+  title: 'Pages/Top/IntroBackground',
   component: IntroBackground,
+  tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
   },

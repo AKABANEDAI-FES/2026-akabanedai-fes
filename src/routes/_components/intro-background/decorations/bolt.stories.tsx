@@ -3,8 +3,9 @@ import type { Meta, StoryObj } from '@storybook/tanstack-react'
 import { Bolt } from './bolt'
 
 const meta = {
-  title: 'Routes/IntroBackground/Decorations/Bolt',
+  title: 'Pages/Top/IntroBackground/Decorations/Bolt',
   component: Bolt,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   },

@@ -3,8 +3,9 @@ import type { Meta, StoryObj } from '@storybook/tanstack-react'
 import { FirstView } from './first-view'
 
 const meta = {
-  title: 'Routes/FirstView',
+  title: 'Pages/Top/FirstView',
   component: FirstView,
+  tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
   },

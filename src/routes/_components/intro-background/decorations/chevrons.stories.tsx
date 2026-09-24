@@ -3,8 +3,9 @@ import type { Meta, StoryObj } from '@storybook/tanstack-react'
 import { Chevrons } from './chevrons'
 
 const meta = {
-  title: 'Routes/IntroBackground/Decorations/Chevrons',
+  title: 'Pages/Top/IntroBackground/Decorations/Chevrons',
   component: Chevrons,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   },

@@ -5,8 +5,9 @@ import { Stripe, type StripeColor } from './stripe'
 const colors = ['primary', 'secondary', 'accent'] satisfies StripeColor[]
 
 const meta = {
-  title: 'Routes/IntroBackground/Decorations/Stripe',
+  title: 'Pages/Top/IntroBackground/Decorations/Stripe',
   component: Stripe,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   },

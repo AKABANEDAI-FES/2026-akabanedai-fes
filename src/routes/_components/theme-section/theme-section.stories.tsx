@@ -3,8 +3,9 @@ import type { Meta, StoryObj } from '@storybook/tanstack-react'
 import { ThemeSection } from './theme-section'
 
 const meta = {
-  title: 'Routes/ThemeSection',
+  title: 'Pages/Top/ThemeSection',
   component: ThemeSection,
+  tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
   },
