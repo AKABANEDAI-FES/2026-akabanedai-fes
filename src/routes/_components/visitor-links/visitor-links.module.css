@@ -36,7 +36,7 @@
 }
 
 .waveLeft {
-  max-width: 35%;
+  width: 40%;
 
   @media (--mobile) {
     display: none;
@@ -44,7 +44,7 @@
 }
 
 .waveRight {
-  max-width: 45%;
+  width: 36%;
 
   @media (--mobile) {
     display: none;
@@ -72,7 +72,7 @@
 .list {
   position: relative;
   z-index: 1;
-  width: 70%;
+  width: 60%;
   padding: 0;
   list-style: none;
 

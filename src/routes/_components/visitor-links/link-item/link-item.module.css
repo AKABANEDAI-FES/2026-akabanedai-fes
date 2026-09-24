@@ -2,11 +2,11 @@
 
 .link {
   display: flex;
-  gap: 1.5rem;
+  gap: 6svw;
   align-items: center;
   justify-content: center;
-  padding: 3rem 0;
-  font-size: clamp(1.5rem, 4vw, 3rem);
+  padding: max(3rem, 4svw) 0;
+  font-size: max(1.5rem, 4svw);
   color: var(--color-foreground);
   text-decoration: none;
 }
@@ -18,16 +18,16 @@
 
 .chevron {
   display: block;
-  width: clamp(0.75rem, 2vw, 1.5rem);
-  height: clamp(0.75rem, 2vw, 1.5rem);
-  border-top: clamp(3px, 0.5vw, 6px) solid var(--color-accent);
-  border-right: clamp(3px, 0.5vw, 6px) solid var(--color-accent);
+  width: max(0.75rem, 2.4svw);
+  height: max(0.75rem, 2.4svw);
+  border-top: max(3px, 0.6svw) solid var(--color-accent);
+  border-right: max(3px, 0.6svw) solid var(--color-accent);
   rotate: 45deg;
   transition: scale 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 
 .chevron:not(:first-child) {
-  margin-left: -0.25rem;
+  margin-left: min(-0.25rem, -0.4svw);
 }
 
 .link:is(:hover, :focus-visible) .chevron:nth-child(1) {
