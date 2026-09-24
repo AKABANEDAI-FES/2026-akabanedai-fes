@@ -7,6 +7,7 @@
 
 .introBackground {
   position: relative;
+  width: 100%;
   overflow: clip;
   isolation: isolate;
 }
