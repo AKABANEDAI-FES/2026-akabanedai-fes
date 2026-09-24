@@ -97,12 +97,10 @@
   display: flex;
   grid-row: 1 / span 2;
   grid-column: -2;
-  align-items: center;
   justify-self: end;
 }
 
 .chevron {
-  display: block;
   width: var(--chevron-size);
   height: var(--chevron-size);
   border-top: calc(var(--chevron-size) / 4) solid var(--color-accent);
