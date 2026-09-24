@@ -9,25 +9,64 @@
   min-height: 90svh;
   overflow: hidden;
   background-color: var(--color-primary);
+
+  @media (--mobile) {
+    min-height: 75svh;
+  }
 }
 
-.bgPatternLeft {
+.waveLeft,
+.waveLeftMobile {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 0;
-  max-width: 35%;
+  color: var(--color-secondary);
   pointer-events: none;
-  object-position: top left;
 }
 
-.bgPatternRight {
+.waveRight,
+.waveRightMobile {
   position: absolute;
   right: 0;
   bottom: 0;
   z-index: 0;
-  max-width: 45%;
+  color: var(--color-secondary);
   pointer-events: none;
+}
+
+.waveLeft {
+  max-width: 35%;
+
+  @media (--mobile) {
+    display: none;
+  }
+}
+
+.waveRight {
+  max-width: 45%;
+
+  @media (--mobile) {
+    display: none;
+  }
+}
+
+.waveLeftMobile {
+  display: none;
+
+  @media (--mobile) {
+    display: block;
+    width: min(78%, 320px);
+  }
+}
+
+.waveRightMobile {
+  display: none;
+
+  @media (--mobile) {
+    display: block;
+    width: min(73%, 300px);
+  }
 }
 
 .list {
@@ -36,6 +75,10 @@
   width: 70%;
   padding: 0;
   list-style: none;
+
+  @media (--mobile) {
+    width: 80%;
+  }
 }
 
 .listItem {
@@ -50,32 +93,4 @@
   height: 2px;
   content: '';
   background: linear-gradient(to right, var(--color-secondary), var(--color-accent));
-}
-
-@media (--mobile) {
-  .container {
-    min-height: 75svh;
-  }
-
-  .bgPatternLeft {
-    top: 0;
-    left: 0;
-    width: 100%;
-    max-width: 70%;
-    height: clamp(10svh, 22%, 22svh);
-    object-position: top left;
-  }
-
-  .bgPatternRight {
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    max-width: 70%;
-    height: clamp(10svh, 50%, 20svh);
-    max-height: none;
-  }
-
-  .list {
-    width: 80%;
-  }
 }
