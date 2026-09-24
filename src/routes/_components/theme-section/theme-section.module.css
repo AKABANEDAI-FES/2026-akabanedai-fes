@@ -108,8 +108,8 @@
   border-top: calc(var(--chevron-size) / 4) solid var(--color-accent);
   border-right: calc(var(--chevron-size) / 4) solid var(--color-accent);
   rotate: 45deg;
-}
 
-.chevron:not(:first-child) {
-  margin-left: calc(var(--chevron-size) / -6);
+  &:not(:first-child) {
+    margin-left: calc(var(--chevron-size) / -6);
+  }
 }
