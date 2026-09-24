@@ -2,11 +2,12 @@
 
 .links {
   display: grid;
-  grid-template-columns: repeat(4, min(250px, 20svw));
+  grid-template-columns: repeat(4, minmax(0, 250px));
   gap: min(72px, 5svw);
   justify-content: center;
+  width: 100%;
   padding-block-end: 8px;
-  padding-inline: min(24px, 2svw);
+  padding-inline: 8svw;
 
   @media (--mobile) {
     grid-template-columns: repeat(2, 1fr);
