@@ -22,9 +22,7 @@
   pointer-events: none;
 }
 
-.layerBack,
-.layerMiddle,
-.layerFront {
+.layer {
   position: absolute;
   inset: 0;
 
@@ -45,13 +43,19 @@
 }
 
 .layerBack {
+  composes: layer;
+
   --speed: 0.3;
 }
 
 .layerMiddle {
+  composes: layer;
+
   --speed: 0.6;
 }
 
 .layerFront {
+  composes: layer;
+
   --speed: 0.9;
 }
