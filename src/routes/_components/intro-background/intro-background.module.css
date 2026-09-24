@@ -1,3 +1,5 @@
+@import url('../../../styles/media.css');
+
 @keyframes parallax {
   to {
     translate: calc(cos(var(--angle)) * var(--speed) * 100svh)
@@ -21,6 +23,23 @@
   z-index: -1;
   container-type: inline-size;
   pointer-events: none;
+}
+
+.desktopDecorations {
+  composes: decorations;
+
+  @media (--mobile) {
+    display: none;
+  }
+}
+
+.mobileDecorations {
+  composes: decorations;
+  display: none;
+
+  @media (--mobile) {
+    display: block;
+  }
 }
 
 .layer {
