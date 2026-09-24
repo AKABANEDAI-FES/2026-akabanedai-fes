@@ -14,13 +14,11 @@ const variantStyles = {
 
 type LinkButtonBaseProps = ComponentProps<'a'> & {
   variant?: LinkButtonVariant
-  disabled?: boolean
 }
 
 const LinkButtonBase: FC<LinkButtonBaseProps> = ({
   variant = 'button',
   className,
-  disabled: _disabled,
   ...anchorProps
 }) => <a className={cn(variantStyles[variant], className)} {...anchorProps} />
 
