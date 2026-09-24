@@ -10,6 +10,7 @@
   width: 100%;
   overflow: clip;
   isolation: isolate;
+  view-timeline-name: --intro-background;
 }
 
 .decorations {
@@ -36,8 +37,8 @@
       animation-name: parallax;
       animation-timing-function: linear;
       animation-fill-mode: both;
-      animation-timeline: scroll(root);
-      animation-range: 0 100svh;
+      animation-timeline: --intro-background;
+      animation-range: exit-crossing;
     }
   }
 }
