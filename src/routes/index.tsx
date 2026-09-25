@@ -20,17 +20,60 @@ const FEATURED_PROGRAM_IDS = [
   'a1c2e9f7-5113-437c-92a9-3b1c5401ca51', // AR スタンプラリー
 ]
 
+// HTML文字列から最初の img タグの src を抽出する関数
+const extractFirstImageUrl = (html: string | null): string | null => {
+  if (!html) return null
+  const match = html.match(/<img[^>]+src=["']([^"']+)["']/i)
+  return match?.[1] ?? null
+}
+
+// 配列をシャッフルする関数（リロード時のランダム化用）
+const shuffleArray = <T,>(array: T[]): T[] => {
+  const shuffled = [...array]
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    const itemI = shuffled[i]
+    const itemJ = shuffled[j]
+    if (itemI !== undefined && itemJ !== undefined) {
+      shuffled[i] = itemJ
+      shuffled[j] = itemI
+    }
+  }
+  return shuffled
+}
+
 export const Route = createFileRoute('/')({
   loader: () => fetchFeaturedPrograms(),
   component: () => <IndexPage />,
 })
 
 const fetchFeaturedPrograms = createServerFn({ method: 'GET' }).handler(async () => {
-  const { data } = await akabaseClient.getProjects({ throwOnError: true })
+  const projectDetailPromises = FEATURED_PROGRAM_IDS.map(async (projectId) => {
+    try {
+      const { data } = await akabaseClient.getProjectsByProjectId({
+        path: { projectId },
+        throwOnError: true,
+      })
+      if (!data) return null
 
-  const programs = FEATURED_PROGRAM_IDS.flatMap(
-    (id) => data.projects.find((project) => project.id === id) ?? [],
+      // webContentHtml から写真URLを取得（なければ logoUrl にフォールバック）
+      const photoUrl = extractFirstImageUrl(data.webContentHtml) ?? data.logoUrl
+
+      return {
+        ...data,
+        photoUrl,
+      }
+    } catch {
+      return null
+    }
+  })
+
+  const fetchedProjects = (await Promise.all(projectDetailPromises)).filter(
+    (p): p is NonNullable<typeof p> => p !== null,
   )
+
+  // 取得した企画をランダムにシャッフル
+  const programs = shuffleArray(fetchedProjects)
 
   return { programs }
 })
