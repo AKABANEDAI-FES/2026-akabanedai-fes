@@ -1,0 +1,41 @@
+.title {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-foreground);
+}
+
+.arrows {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 32px;
+  height: 1.5rem;
+  margin-left: 0.25rem;
+}
+
+.arrow {
+  position: absolute;
+  flex-shrink: 0;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 8px solid var(--color-accent);
+}
+
+.arrow:nth-child(1) {
+  left: 0;
+}
+
+.arrow:nth-child(2) {
+  left: 8px;
+}
+
+.arrow:nth-child(3) {
+  left: 16px;
+}
