@@ -8,8 +8,8 @@ import styles from './link-button.module.css'
 export type LinkButtonVariant = 'button' | 'card'
 
 const variantStyles = {
-  button: styles.button,
-  card: styles.card,
+  button: styles.button ?? '',
+  card: styles.card ?? '',
 } as const satisfies Record<LinkButtonVariant, string>
 
 type LinkButtonBaseProps = ComponentProps<'a'> & {

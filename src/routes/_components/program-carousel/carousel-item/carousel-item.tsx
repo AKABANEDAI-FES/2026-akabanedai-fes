@@ -12,7 +12,9 @@ type Project = GetProjectsResponse['projects'][number]
 export type Program = Pick<Project, 'id' | 'name' | 'logoUrl'>
 
 type CarouselItemProps = {
-  program: Program
+  program: Program & {
+    photoUrl?: string | null
+  }
   isActive?: boolean
 }
 
@@ -24,9 +26,9 @@ export const CarouselItem: FC<CarouselItemProps> = ({ program, isActive = false 
   >
     <div className={styles.inner}>
       <div className={styles.imageContainer}>
-        {program.logoUrl !== null && (
+        {(program.photoUrl ?? program.logoUrl) !== null && (
           <img
-            src={program.logoUrl}
+            src={program.photoUrl ?? program.logoUrl ?? ''}
             alt=""
             className={styles.image}
             loading="lazy"

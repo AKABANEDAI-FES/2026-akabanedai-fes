@@ -7,15 +7,15 @@ import styles from './stripe.module.css'
 export type StripeColor = 'primary' | 'secondary' | 'accent'
 
 const fromStyles = {
-  primary: styles.fromPrimary,
-  secondary: styles.fromSecondary,
-  accent: styles.fromAccent,
+  primary: styles.fromPrimary ?? '',
+  secondary: styles.fromSecondary ?? '',
+  accent: styles.fromAccent ?? '',
 } as const satisfies Record<StripeColor, string>
 
 const toStyles = {
-  primary: styles.toPrimary,
-  secondary: styles.toSecondary,
-  accent: styles.toAccent,
+  primary: styles.toPrimary ?? '',
+  secondary: styles.toSecondary ?? '',
+  accent: styles.toAccent ?? '',
 } as const satisfies Record<StripeColor, string>
 
 type StripeProps = {

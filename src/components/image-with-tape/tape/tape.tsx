@@ -7,14 +7,14 @@ import styles from './tape.module.css'
 export type TapeVariant = 'striped' | 'dark' | 'translucent'
 
 const variantStyles = {
-  striped: styles.striped,
-  dark: styles.dark,
-  translucent: styles.translucent,
+  striped: styles.striped ?? '',
+  dark: styles.dark ?? '',
+  translucent: styles.translucent ?? '',
 } as const satisfies Record<TapeVariant, string>
 
 type TapeProps = {
   variant: TapeVariant
-  className?: string
+  className?: string | undefined
 }
 
 export const Tape: FC<TapeProps> = ({ variant, className }) => (
